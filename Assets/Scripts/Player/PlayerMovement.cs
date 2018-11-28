@@ -16,10 +16,7 @@ public class PlayerMovement : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        //if the player gets knocked off center...
-       
-
-
+ 
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * lateralMovementSpeed;
         var z = Input.GetAxis("Vertical") * Time.deltaTime * longitudinalMovementSpeed;
 

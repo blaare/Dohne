@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StandardBlaster :  Blaster{
+public class RaycastBlaster :  Blaster{
 
 
     public override void Fire()
