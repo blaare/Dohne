@@ -8,7 +8,7 @@ public class RifleItem : Item {
 
     public override void Pickup(GameObject player)
     {
-        Destroy(gameObject); 
+        
         //Get the player's WeaponSelector
         WeaponSelector weaponSelector = player.GetComponent<WeaponSelector>();
 
@@ -17,17 +17,26 @@ public class RifleItem : Item {
         {
             if (weapon.gameObject.name == "Rifle")
             {
-                weapon.GetComponent<Blaster>().IncreaseAmmo(quantity);
-                Debug.Log("Increased Ammo Count by " + quantity.ToString());
-                return;
+                if (weapon.GetComponent<Blaster>().IncreaseAmmo(quantity))
+                {
+                    Destroy(gameObject);
+                    Debug.Log("Increased Ammo Count by " + quantity.ToString());
+                    return;
+                } else
+                {
+                    Debug.Log("Max Ammo Reached, Leaving object alone");
+                    return;
+                }
             }
         }
+        Destroy(gameObject);
         Debug.Log("Picked up Rifle");
 
         //Make sure the transforms are parented, correctly.
         GameObject weapons = player.transform.GetChild(2).gameObject;
         var newWeapon = Instantiate(rifleBlasterPrefab, weapons.transform);
- 
+        newWeapon.transform.localPosition = new Vector3(0, 0, 0);
+        newWeapon.name = "Rifle";
         newWeapon.SetActive(false);
         weaponSelector.weapons.Add(newWeapon);
 

@@ -82,14 +82,19 @@ public class RaycastBlaster :  Blaster{
         }
     }
 
-    public override void IncreaseAmmo(int amount)
+    public override bool IncreaseAmmo(int amount)
     {
-        if(currentAmmo + amount > maxAmmo)
+        if(currentAmmo == maxAmmo)
+        {
+            return false;
+        } else if(currentAmmo + amount > maxAmmo)
         {
             currentAmmo = maxAmmo;
+            return true;
         } else
         {
             currentAmmo += amount;
+            return true;
         }
     }
 }

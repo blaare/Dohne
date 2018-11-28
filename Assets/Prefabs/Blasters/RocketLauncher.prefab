@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4931694181430162}
   - component: {fileID: 114163273818172034}
   m_Layer: 0
-  m_Name: 3
+  m_Name: RocketLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,12 +167,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 5
-  damagePerShot: 10
+  damagePerShot: 100
   ammoInClip: 10
   clipSize: 10
   currentAmmo: 10
   maxAmmo: 10
   range: 10
+  offset: {x: 0, y: 0, z: 0}
   shotParticleSystem: {fileID: 198846303837306550, guid: 2cf4b61d8ff773c4c8c0f476e3509273,
     type: 2}
   projectile: {fileID: 1521441847115774, guid: 8b1eda49c131a674395dfa938e046c47, type: 2}

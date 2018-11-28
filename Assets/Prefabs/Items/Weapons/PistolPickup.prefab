@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114856299570659582}
   - component: {fileID: 65803487824519124}
   m_Layer: 0
-  m_Name: Pistol
+  m_Name: PistolPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -238,6 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quantity: 0
+  icon: {fileID: 0}
 --- !u!114 &114856299570659582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,4 +251,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quantity: 0
+  icon: {fileID: 0}
   pistolPrefab: {fileID: 0}
