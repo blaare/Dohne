@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
     public Blaster currentBlaster;
-	// Update is called once per frame
+    // Update is called once per frame
+
+    public Text ammoCount;
+    public Text ammoInClip;
 
     void Start()
     {
@@ -21,5 +25,13 @@ public class PlayerController : MonoBehaviour {
         {
             currentBlaster.Reload();
         }
+
+        UpdateUI();
 	}
+
+    public void UpdateUI()
+    {
+        ammoInClip.text = currentBlaster.ammoInClip.ToString();
+        ammoCount.text = currentBlaster.currentAmmo.ToString();
+    }
 }
