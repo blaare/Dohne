@@ -96,7 +96,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1713207764944384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4827294118331020}
@@ -230,6 +230,5 @@ MonoBehaviour:
   currentAmmo: 20
   maxAmmo: 40
   range: 50
-  offset: {x: 0, y: 0, z: 0.5}
   shotParticleSystem: {fileID: 198846303837306550, guid: 2cf4b61d8ff773c4c8c0f476e3509273,
     type: 2}

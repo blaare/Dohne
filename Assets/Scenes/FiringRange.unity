@@ -167,6 +167,7 @@ Transform:
   - {fileID: 318972797}
   - {fileID: 516094125}
   - {fileID: 8135893}
+  - {fileID: 1443935309}
   m_Father: {fileID: 1458086500}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -816,6 +817,52 @@ Transform:
   m_Father: {fileID: 1458086500}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1151935425
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 146487673}
+    m_Modifications:
+    - target: {fileID: 4765289804610550, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -10.439999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765289804610550, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765289804610550, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -8.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765289804610550, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765289804610550, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765289804610550, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765289804610550, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765289804610550, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231242295883844, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6, type: 2}
+      propertyPath: m_Name
+      value: ScopedBlasterPickup (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1155188313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1196,31 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd72063bab7c97a4cba7eb68cb9bbb74, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1443935308 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1231242295883844, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1151935425}
+--- !u!4 &1443935309 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4765289804610550, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1151935425}
+--- !u!114 &1443935310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443935308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775a306c8d862424ba5819e805b4f785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quantity: 20
+  icon: {fileID: 0}
+  rifleBlasterPrefab: {fileID: 1713207764944384, guid: a72402be90d6cf7499c4fba9dfa9f040,
+    type: 2}
 --- !u!1 &1458086499
 GameObject:
   m_ObjectHideFlags: 0

@@ -35,7 +35,7 @@ public class RifleItem : Item {
         //Make sure the transforms are parented, correctly.
         GameObject weapons = player.transform.GetChild(2).gameObject;
         var newWeapon = Instantiate(rifleBlasterPrefab, weapons.transform);
-        newWeapon.transform.localPosition = new Vector3(0, 0, 0);
+        //newWeapon.transform.localPosition = new Vector3(0, 0, 0);
         newWeapon.name = "Rifle";
         newWeapon.SetActive(false);
         weaponSelector.weapons.Add(newWeapon);
