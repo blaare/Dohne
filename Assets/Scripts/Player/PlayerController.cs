@@ -11,11 +11,6 @@ public class PlayerController : MonoBehaviour {
     public Text ammoCount;
     public Text ammoInClip;
 
-    void Start()
-    {
-
-    }
-
 	void Update () {
 
 

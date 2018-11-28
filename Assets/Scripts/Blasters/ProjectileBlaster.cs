@@ -10,16 +10,44 @@ public class ProjectileBlaster : Blaster
 
     public override void Fire()
     {
-        var bullet = (GameObject)Instantiate(
-        projectile,
-        bulletSpawn.position,
-        bulletSpawn.rotation);
 
-        // Add velocity to the bullet
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletSpeed;
 
-        // Destroy the bullet after 2 seconds
-        Destroy(bullet, 2.0f);
+        if (ammoInClip > 0)
+        {
+            //Handle the Firing animation with a particle system
+            shotParticleSystem.Stop();
+            shotParticleSystem.Play();
+
+            //Create the bullet projectile
+            var bullet = (GameObject)Instantiate(
+             projectile,
+             bulletSpawn.position,
+             bulletSpawn.rotation);
+            //Make sure to set the damage done for if the projectile collides
+            bullet.GetComponent<Bullet>().damage = damagePerShot;
+
+            // Add velocity to the bullet
+            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletSpeed;
+
+            // Destroy the bullet after 2 seconds
+            Destroy(bullet, 2.0f);
+
+
+
+            //Reduce the number of available ammo
+            ammoInClip--;
+        }
+        else
+        {
+            Debug.Log("EMPTY CLIP");
+
+            //Handle Automatic Reloading
+            if (currentAmmo > 0)
+                Reload();
+        }
+
+
+        
     }
 
     public override void Reload()
