@@ -5715,6 +5715,11 @@ Prefab:
       value: 
       objectReference: {fileID: 13400000, guid: bb54ee7be86fffd4caf4c8fcf17da800,
         type: 2}
+    - target: {fileID: 54203559717577920, guid: 7da2da07c5c832a42b728aac63e790a2,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114244403890671786, guid: 7da2da07c5c832a42b728aac63e790a2, type: 2}
     - {fileID: 136434711515456000, guid: 7da2da07c5c832a42b728aac63e790a2, type: 2}
@@ -5900,17 +5905,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1981410458852772, guid: 7da2da07c5c832a42b728aac63e790a2,
     type: 2}
   m_PrefabInternal: {fileID: 1466223581}
---- !u!65 &1805311627
-BoxCollider:
+--- !u!136 &1805311627
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1805311622}
-  m_Material: {fileID: 13400000, guid: bb54ee7be86fffd4caf4c8fcf17da800, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2, z: 1}
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1809290731
 GameObject:
