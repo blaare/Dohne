@@ -61,7 +61,7 @@ public class WeaponSelector : MonoBehaviour {
     {
         weaponIcons[index].color = Color.black;
         weapons[index].SetActive(true);
-        weapons[index].transform.position = transform.GetChild(2).transform.position;
+        weapons[index].transform.position = transform.GetChild(2).transform.position + weapons[index].GetComponent<Blaster>().offset;
 
         GetComponent<PlayerController>().currentBlaster = weapons[index].GetComponent<Blaster>();
     }

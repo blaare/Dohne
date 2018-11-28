@@ -13,6 +13,8 @@ public abstract class Blaster : MonoBehaviour {
     public int maxAmmo;
     public float range;
 
+    public Vector3 offset;
+
     public ParticleSystem shotParticleSystem;
 
     public abstract void Fire();
