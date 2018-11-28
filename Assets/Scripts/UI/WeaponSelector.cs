@@ -8,8 +8,6 @@ public class WeaponSelector : MonoBehaviour {
     public Image[] weaponIcons;
     public List<GameObject> weapons;
 
-
-
     public int weaponIndex;
 
 	// Use this for initialization
@@ -51,18 +49,27 @@ public class WeaponSelector : MonoBehaviour {
         
 	}
 
+    /**
+     * Function DeSelectWeapon
+     * Goal:    to "unequip" the weapon.
+     */ 
     public void DeSelectWeapon(int index)
     {
         weaponIcons[index].color = Color.white;
         weapons[index].SetActive(false);
     }
 
+    /**
+     * Function SelectWeapon
+     * Goal:    to "equip" the weapon.
+     */ 
     public void SelectWeapon(int index)
     {
         weaponIcons[index].color = Color.black;
         weapons[index].SetActive(true);
         weapons[index].transform.position = transform.GetChild(2).transform.position + weapons[index].GetComponent<Blaster>().offset;
 
+        //Update what the current weapon is.
         GetComponent<PlayerController>().currentBlaster = weapons[index].GetComponent<Blaster>();
     }
 
