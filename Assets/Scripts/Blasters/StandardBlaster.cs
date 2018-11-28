@@ -38,6 +38,7 @@ public class StandardBlaster :  Blaster{
             if(currentAmmo > 0)
                 Reload();
         }
+        
 
     }
 

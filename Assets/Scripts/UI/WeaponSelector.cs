@@ -14,7 +14,7 @@ public class WeaponSelector : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        weaponIndex = 0;
+
         for(int i = 0; i < weapons.Count; i++)
         {
             if(i != weaponIndex)
