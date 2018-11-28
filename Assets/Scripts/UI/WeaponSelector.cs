@@ -20,8 +20,12 @@ public class WeaponSelector : MonoBehaviour {
             if(i != weaponIndex)
             {
                 weapons[i].SetActive(false);
+            } else
+            {
+                SelectWeapon(i);
             }
         }
+
 	}
 	
 	// Update is called once per frame
@@ -32,6 +36,7 @@ public class WeaponSelector : MonoBehaviour {
         {
             DeSelectWeapon(weaponIndex);
             weaponIndex = (weaponIndex + 1) % weapons.Count;
+            SelectWeapon(weaponIndex);
         }
         else if (d < 0f)
         {
@@ -41,8 +46,9 @@ public class WeaponSelector : MonoBehaviour {
             {
                 weaponIndex = weapons.Count - 1;
             }
+            SelectWeapon(weaponIndex);
         }
-        SelectWeapon(weaponIndex);
+        
 	}
 
     public void DeSelectWeapon(int index)
@@ -55,6 +61,9 @@ public class WeaponSelector : MonoBehaviour {
     {
         weaponIcons[index].color = Color.black;
         weapons[index].SetActive(true);
-        this.GetComponent<PlayerController>().currentBlaster = weapons[index].GetComponent<Blaster>();
+        weapons[index].transform.position = transform.GetChild(2).transform.position;
+
+        GetComponent<PlayerController>().currentBlaster = weapons[index].GetComponent<Blaster>();
     }
+
 }

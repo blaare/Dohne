@@ -81,4 +81,15 @@ public class RaycastBlaster :  Blaster{
             currentAmmo     -= clipSize;
         }
     }
+
+    public override void IncreaseAmmo(int amount)
+    {
+        if(currentAmmo + amount > maxAmmo)
+        {
+            currentAmmo = maxAmmo;
+        } else
+        {
+            currentAmmo += amount;
+        }
+    }
 }

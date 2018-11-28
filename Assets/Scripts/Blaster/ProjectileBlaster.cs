@@ -89,4 +89,9 @@ public class ProjectileBlaster : Blaster
             currentAmmo -= clipSize;
         }
     }
+
+    public override void IncreaseAmmo(int amount)
+    {
+        
+    }
 }

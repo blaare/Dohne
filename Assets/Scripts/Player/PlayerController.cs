@@ -11,9 +11,9 @@ public class PlayerController : MonoBehaviour {
     public Text ammoCount;
     public Text ammoInClip;
 
+
+
 	void Update () {
-
-
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -32,4 +32,15 @@ public class PlayerController : MonoBehaviour {
         ammoInClip.text = currentBlaster.ammoInClip.ToString();
         ammoCount.text = currentBlaster.currentAmmo.ToString();
     }
+
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "item")
+        {
+            collision.gameObject.GetComponent<Item>().Pickup(gameObject);
+
+        } 
+    }
+
 }

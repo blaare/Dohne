@@ -19,6 +19,8 @@ public abstract class Blaster : MonoBehaviour {
 
     public abstract void Reload();
 
+    public abstract void IncreaseAmmo(int amount);
+
 
 
 
