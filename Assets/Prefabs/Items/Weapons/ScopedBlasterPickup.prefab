@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4765289804610550}
   - component: {fileID: 65468771816660252}
+  - component: {fileID: 114120531607337798}
   m_Layer: 0
   m_Name: ScopedBlasterPickup
   m_TagString: item
@@ -271,3 +272,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114120531607337798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1231242295883844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775a306c8d862424ba5819e805b4f785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quantity: 20
+  icon: {fileID: 0}
+  rifleBlasterPrefab: {fileID: 1713207764944384, guid: a72402be90d6cf7499c4fba9dfa9f040,
+    type: 2}

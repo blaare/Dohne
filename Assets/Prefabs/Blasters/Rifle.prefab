@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4956400802570720}
   - component: {fileID: 114147342368804406}
   m_Layer: 0
-  m_Name: ScopedBlaster
+  m_Name: Rifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
