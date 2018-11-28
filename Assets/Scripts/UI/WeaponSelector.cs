@@ -5,13 +5,23 @@ using UnityEngine.UI;
 
 public class WeaponSelector : MonoBehaviour {
 
-    public Image[] weapons;
+    public Image[] weaponIcons;
+    public List<GameObject> weapons;
+
+
 
     public int weaponIndex;
 
 	// Use this for initialization
 	void Start () {
         weaponIndex = 0;
+        for(int i = 0; i < weapons.Count; i++)
+        {
+            if(i != weaponIndex)
+            {
+                weapons[i].SetActive(false);
+            }
+        }
 	}
 	
 	// Update is called once per frame
@@ -21,27 +31,30 @@ public class WeaponSelector : MonoBehaviour {
         if (d > 0f)
         {
             DeSelectWeapon(weaponIndex);
-            weaponIndex = (weaponIndex + 1) % weapons.Length;
+            weaponIndex = (weaponIndex + 1) % weapons.Count;
         }
         else if (d < 0f)
         {
             DeSelectWeapon(weaponIndex);
-            weaponIndex = (weaponIndex - 1) % weapons.Length;
+            weaponIndex = (weaponIndex - 1) % weapons.Count;
             if(weaponIndex < 0)
             {
-                weaponIndex = weapons.Length - 1;
+                weaponIndex = weapons.Count - 1;
             }
         }
-        SelectedWeapon(weaponIndex);
+        SelectWeapon(weaponIndex);
 	}
 
     public void DeSelectWeapon(int index)
     {
-        weapons[index].color = Color.white;
+        weaponIcons[index].color = Color.white;
+        weapons[index].SetActive(false);
     }
 
-    public void SelectedWeapon(int index)
+    public void SelectWeapon(int index)
     {
-        weapons[index].color = Color.black;
+        weaponIcons[index].color = Color.black;
+        weapons[index].SetActive(true);
+        this.GetComponent<PlayerController>().currentBlaster = weapons[index].GetComponent<Blaster>();
     }
 }
