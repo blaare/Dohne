@@ -7,8 +7,6 @@ public abstract class Item : MonoBehaviour {
 
     public int quantity;
 
-    public Sprite icon;
-
     public abstract void Pickup(GameObject player);
 
     void Update()

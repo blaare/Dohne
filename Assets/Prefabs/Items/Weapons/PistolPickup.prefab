@@ -187,8 +187,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4949902225541320}
-  - component: {fileID: 114856299570659582}
   - component: {fileID: 65803487824519124}
+  - component: {fileID: 114472148396285860}
   m_Layer: 15
   m_Name: PistolPickup
   m_TagString: item
@@ -1325,7 +1325,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114856299570659582
+--- !u!114 &114472148396285860
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1333,10 +1333,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1595407112373586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccd1ce9657492ae4181f3e7d38d62e22, type: 3}
+  m_Script: {fileID: 11500000, guid: 59dcec1229e048746b55efd70e1e459e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   quantity: 10
-  icon: {fileID: 21300000, guid: ba579a50125183b40a7c35a586d14462, type: 3}
-  pistolPrefab: {fileID: 1764259488962768, guid: 3b53099611fae1b4e98cd3d3396764dc,
+  weaponPrefab: {fileID: 1764259488962768, guid: 3b53099611fae1b4e98cd3d3396764dc,
     type: 2}
+  weaponName: Pistol
+  icon: {fileID: 21300000, guid: ba579a50125183b40a7c35a586d14462, type: 3}
