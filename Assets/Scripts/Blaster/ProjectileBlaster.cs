@@ -90,8 +90,4 @@ public class ProjectileBlaster : Blaster
         }
     }
 
-    public override bool IncreaseAmmo(int amount)
-    {
-        return true;
-    }
 }

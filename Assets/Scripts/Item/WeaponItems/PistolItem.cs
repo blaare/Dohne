@@ -5,10 +5,13 @@ using UnityEngine;
 public class PistolItem : Item
 {
     public GameObject pistolPrefab;
-    
+    private bool hasCollided = false;
 
     public override void Pickup(GameObject player)
     {
+        if (hasCollided)
+            return;
+        hasCollided = true;
         //Get the player's WeaponSelector
         WeaponSelector weaponSelector = player.GetComponent<WeaponSelector>();
 
@@ -26,6 +29,7 @@ public class PistolItem : Item
                 else
                 {
                     Debug.Log("Max Ammo Reached, Leaving object alone");
+                    hasCollided = false;
                     return;
                 }
             }

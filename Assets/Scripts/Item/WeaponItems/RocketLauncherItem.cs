@@ -5,10 +5,14 @@ using UnityEngine;
 public class RocketLauncherItem : Item {
 
     public GameObject rocketLauncherPrefab;
+    private bool hasCollided = false;
 
     public override void Pickup(GameObject player)
     {
 
+        if (hasCollided)
+            return;
+        hasCollided = true;
         //Get the player's WeaponSelector
         WeaponSelector weaponSelector = player.GetComponent<WeaponSelector>();
 
@@ -25,6 +29,7 @@ public class RocketLauncherItem : Item {
                 }
                 else
                 {
+                    hasCollided = false;
                     Debug.Log("Max Ammo Reached, Leaving object alone");
                     return;
                 }

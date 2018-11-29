@@ -5,10 +5,13 @@ using UnityEngine;
 public class RifleItem : Item {
     
     public GameObject rifleBlasterPrefab;
+    private bool hasCollided = false;
 
     public override void Pickup(GameObject player)
     {
-        
+        if (hasCollided)
+            return;
+        hasCollided = true;
         //Get the player's WeaponSelector
         WeaponSelector weaponSelector = player.GetComponent<WeaponSelector>();
 
@@ -25,6 +28,7 @@ public class RifleItem : Item {
                 } else
                 {
                     Debug.Log("Max Ammo Reached, Leaving object alone");
+                    hasCollided = false;
                     return;
                 }
             }
