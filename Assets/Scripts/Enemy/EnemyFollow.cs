@@ -12,10 +12,25 @@ public class EnemyFollow : MonoBehaviour {
     public float EnemySpeed;
     public int AttackTrigger;
     public RaycastHit Shot;
+    RaycastHit Sight;
+    public float SightRange = 30;
 
     void Update() {
-        transform.LookAt(ThePlayer.transform);
-         if(Physics.Raycast (transform.position, transform.TransformDirection(Vector3.forward), out Shot)) {
+        //see stuff in layer 14
+        int layerMask = 1 << 14;
+
+        //This hits everything except layer 10
+        //layerMask = ~layerMask;
+
+        // If player is within line of sight
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Sight, SightRange, layerMask)) {
+            transform.LookAt(ThePlayer.transform);
+            Debug.Log("THE CUBE HAS SPOTTED YOU.");
+        }
+
+        // If player is within range and can be "heard".
+        if (Physics.Raycast (transform.position, transform.TransformDirection(Vector3.forward), out Shot)) {
+            transform.LookAt(ThePlayer.transform);
             TargetDistance = Shot.distance;
             if (TargetDistance < AllowedRange) {
                 EnemySpeed = 0.02f;
@@ -28,13 +43,13 @@ public class EnemyFollow : MonoBehaviour {
                 EnemySpeed = 0;
                 //TheEnemy.GetComponent<Animation>().Play("Idle");
             }
-         }
+        }
 
-         if(AttackTrigger == 1) {
+        if(AttackTrigger == 1) {
             EnemySpeed = 0;
             //TheEnemy.GetComponent<Animation>().Play("Attacking");
             Debug.Log("CUBE HAS ENGAGED IN COMBAT.");
-         }
+        }
     }
 
     void OnTriggerEnter() {
