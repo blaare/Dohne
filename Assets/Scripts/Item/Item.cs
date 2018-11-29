@@ -1,14 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 
 public abstract class Item : MonoBehaviour {
 
     public int quantity;
 
-    public Image icon;
+    public Sprite icon;
 
     public abstract void Pickup(GameObject player);
 
