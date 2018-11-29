@@ -39,7 +39,6 @@ public class PlayerController : MonoBehaviour {
         if(collision.gameObject.tag == "item")
         {
             collision.gameObject.GetComponent<Item>().Pickup(gameObject);
-
         } 
     }
 

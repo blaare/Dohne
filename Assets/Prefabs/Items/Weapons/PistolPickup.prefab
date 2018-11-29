@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33437208836871000}
   - component: {fileID: 23318672474226402}
   - component: {fileID: 65246615294155766}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 4949902225541320}
   - component: {fileID: 114856299570659582}
   - component: {fileID: 65803487824519124}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: PistolPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 33245926635952156}
   - component: {fileID: 23578712933800328}
   - component: {fileID: 65509032639323444}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: Grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -168,8 +168,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 5
   damagePerShot: 100
-  ammoInClip: 10
-  clipSize: 10
+  ammoInClip: 2
+  clipSize: 2
   currentAmmo: 10
   maxAmmo: 10
   range: 10

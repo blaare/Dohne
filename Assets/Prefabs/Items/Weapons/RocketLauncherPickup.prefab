@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4863603476278562}
   - component: {fileID: 33743089060833740}
   - component: {fileID: 23146849678155392}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4116606026337162}
   - component: {fileID: 114407290019954236}
   - component: {fileID: 65126392072663132}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: RocketLauncherPickup
   m_TagString: item
   m_Icon: {fileID: 0}

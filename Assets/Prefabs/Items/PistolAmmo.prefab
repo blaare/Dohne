@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23258111990480482}
   - component: {fileID: 65761298563341528}
   - component: {fileID: 114192335629255190}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: PistolAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,3 +109,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quantity: 10
+  icon: {fileID: 0}
