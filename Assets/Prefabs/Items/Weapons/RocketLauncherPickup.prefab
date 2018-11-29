@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e910d535090fe0b47834e2c1290ab22e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quantity: 10
+  quantity: 2
   icon: {fileID: 0}
   rocketLauncherPrefab: {fileID: 1304273877485204, guid: ffafdb50b1feee34e9d862030140251e,
     type: 2}

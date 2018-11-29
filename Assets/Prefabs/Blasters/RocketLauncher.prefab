@@ -170,7 +170,7 @@ MonoBehaviour:
   damagePerShot: 100
   ammoInClip: 2
   clipSize: 2
-  currentAmmo: 10
+  currentAmmo: 4
   maxAmmo: 10
   range: 10
   shotParticleSystem: {fileID: 198846303837306550, guid: 2cf4b61d8ff773c4c8c0f476e3509273,

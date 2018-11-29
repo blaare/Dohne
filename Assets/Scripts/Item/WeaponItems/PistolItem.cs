@@ -35,13 +35,13 @@ public class PistolItem : Item
             }
         }
         Destroy(gameObject);
-        Debug.Log("Picked up Rifle");
+        Debug.Log("Picked up Pistol");
 
         //Make sure the transforms are parented, correctly.
         GameObject weapons = player.transform.GetChild(2).gameObject;
         var newWeapon = Instantiate(pistolPrefab, weapons.transform);
         //newWeapon.transform.localPosition = new Vector3(0, 0, 0);
-        newWeapon.name = "Rifle";
+        newWeapon.name = "Pistol";
         newWeapon.SetActive(false);
         weaponSelector.weapons.Add(newWeapon);
 
