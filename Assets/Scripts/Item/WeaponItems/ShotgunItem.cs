@@ -42,6 +42,9 @@ public class ShotgunItem : Item {
         GameObject weapons = player.transform.GetChild(2).gameObject;
         var newWeapon = Instantiate(shotgunPrefab, weapons.transform);
         //newWeapon.transform.localPosition = new Vector3(0, 0, 0);
+
+        //Set The Icon
+        player.GetComponent<WeaponSelector>().weaponImages[weaponSelector.weapons.Count].sprite = icon;
         newWeapon.name = "Shotgun";
         newWeapon.SetActive(false);
         weaponSelector.weapons.Add(newWeapon);

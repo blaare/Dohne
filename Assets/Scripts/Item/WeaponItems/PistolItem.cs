@@ -38,6 +38,7 @@ public class PistolItem : Item
         Debug.Log("Picked up Pistol");
 
         //Make sure the transforms are parented, correctly.
+        player.GetComponent<WeaponSelector>().weaponImages[weaponSelector.weapons.Count].sprite = icon;
         GameObject weapons = player.transform.GetChild(2).gameObject;
         var newWeapon = Instantiate(pistolPrefab, weapons.transform);
         //newWeapon.transform.localPosition = new Vector3(0, 0, 0);

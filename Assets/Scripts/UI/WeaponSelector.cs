@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class WeaponSelector : MonoBehaviour {
 
     public Image[] weaponIcons;
+    public Image[] weaponImages = new Image[5];
     public List<GameObject> weapons;
 
     public int weaponIndex;

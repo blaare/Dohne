@@ -1025,6 +1025,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114859487276005738, guid: 7da2da07c5c832a42b728aac63e790a2,
+        type: 2}
+      propertyPath: weaponImages.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4201802202030174, guid: 7da2da07c5c832a42b728aac63e790a2, type: 2}
       propertyPath: m_LocalPosition.x
       value: -32.62
@@ -1342,6 +1347,31 @@ Prefab:
       propertyPath: m_FontData.m_FontSize
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 114859487276005738, guid: 7da2da07c5c832a42b728aac63e790a2,
+        type: 2}
+      propertyPath: weaponImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 1781422165}
+    - target: {fileID: 114859487276005738, guid: 7da2da07c5c832a42b728aac63e790a2,
+        type: 2}
+      propertyPath: weaponImages.Array.data[1]
+      value: 
+      objectReference: {fileID: 2004962327}
+    - target: {fileID: 114859487276005738, guid: 7da2da07c5c832a42b728aac63e790a2,
+        type: 2}
+      propertyPath: weaponImages.Array.data[2]
+      value: 
+      objectReference: {fileID: 1282656047}
+    - target: {fileID: 114859487276005738, guid: 7da2da07c5c832a42b728aac63e790a2,
+        type: 2}
+      propertyPath: weaponImages.Array.data[3]
+      value: 
+      objectReference: {fileID: 1967373108}
+    - target: {fileID: 114859487276005738, guid: 7da2da07c5c832a42b728aac63e790a2,
+        type: 2}
+      propertyPath: weaponImages.Array.data[4]
+      value: 
+      objectReference: {fileID: 200460304}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7da2da07c5c832a42b728aac63e790a2, type: 2}
   m_IsPrefabAsset: 0

@@ -138,6 +138,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quantity: 2
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: efe94001ed54f0249b56b7f00c0dc92e, type: 3}
   rocketLauncherPrefab: {fileID: 1304273877485204, guid: ffafdb50b1feee34e9d862030140251e,
     type: 2}

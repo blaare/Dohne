@@ -357,6 +357,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quantity: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 071b226b413dfcf47953eb1214290bd4, type: 3}
   shotgunPrefab: {fileID: 1644641040364484, guid: 6107ca95992065c4293962103c914425,
     type: 2}
