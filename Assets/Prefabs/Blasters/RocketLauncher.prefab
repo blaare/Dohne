@@ -80,7 +80,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1694716712456244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.3}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4931694181430162}
@@ -93,7 +93,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1304273877485204}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.18, y: 0.36, z: 0.87}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4447673069676346}
@@ -173,7 +173,6 @@ MonoBehaviour:
   currentAmmo: 10
   maxAmmo: 10
   range: 10
-  offset: {x: 0, y: 0, z: 0}
   shotParticleSystem: {fileID: 198846303837306550, guid: 2cf4b61d8ff773c4c8c0f476e3509273,
     type: 2}
   projectile: {fileID: 1521441847115774, guid: 8b1eda49c131a674395dfa938e046c47, type: 2}

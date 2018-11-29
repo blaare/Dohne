@@ -11,21 +11,6 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1714949263017096}
   m_IsPrefabAsset: 1
---- !u!1 &1081830780591382
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4820079537108278}
-  m_Layer: 0
-  m_Name: BulletSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1146487197129334
 GameObject:
   m_ObjectHideFlags: 0
@@ -36,7 +21,6 @@ GameObject:
   - component: {fileID: 4863603476278562}
   - component: {fileID: 33743089060833740}
   - component: {fileID: 23146849678155392}
-  - component: {fileID: 65487331189402098}
   m_Layer: 11
   m_Name: Cube
   m_TagString: Untagged
@@ -52,9 +36,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4116606026337162}
-  m_Layer: 0
+  - component: {fileID: 114407290019954236}
+  - component: {fileID: 65126392072663132}
+  m_Layer: 11
   m_Name: RocketLauncherPickup
-  m_TagString: Untagged
+  m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,26 +52,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1714949263017096}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -19.050789, y: 0.75, z: 8.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4863603476278562}
-  - {fileID: 4820079537108278}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4820079537108278
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1081830780591382}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4116606026337162}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4863603476278562
 Transform:
@@ -142,15 +114,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1146487197129334}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65487331189402098
+--- !u!65 &65126392072663132
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1146487197129334}
+  m_GameObject: {fileID: 1714949263017096}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114407290019954236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1714949263017096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e910d535090fe0b47834e2c1290ab22e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quantity: 10
+  icon: {fileID: 0}
+  rocketLauncherPrefab: {fileID: 1304273877485204, guid: ffafdb50b1feee34e9d862030140251e,
+    type: 2}

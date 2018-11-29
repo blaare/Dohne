@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4940741038357186}
   - component: {fileID: 33755483984355094}
   - component: {fileID: 23077530785135166}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4765289804610550}
   - component: {fileID: 65468771816660252}
   - component: {fileID: 114120531607337798}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ScopedBlasterPickup
   m_TagString: item
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4129257096461186}
   - component: {fileID: 33533212922809112}
   - component: {fileID: 23269647194197292}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: scope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4695466800603862}
   - component: {fileID: 33243868744218332}
   - component: {fileID: 23631360519668410}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
