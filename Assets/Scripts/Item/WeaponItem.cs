@@ -11,11 +11,11 @@ public class WeaponItem : Item {
     
     
 
-    public override void Pickup(GameObject player)
+    public override bool Pickup(GameObject player)
     {
 
         if (hasCollided)
-            return;
+            return false;
         hasCollided = true;
         //Get the player's WeaponSelector
         WeaponSelector weaponSelector = player.GetComponent<WeaponSelector>();
@@ -29,14 +29,14 @@ public class WeaponItem : Item {
                 {
                     Destroy(gameObject);
                     Debug.Log("Increased Ammo Count by " + quantity.ToString());
-                    return;
+                    return true;
                 }
                 else
                 {
                    
                     hasCollided = false;
                     Debug.Log("Max Ammo Reached, Leaving object alone");
-                    return;
+                    return false;
                 }
             }
         }
@@ -51,6 +51,7 @@ public class WeaponItem : Item {
         newWeapon.name = weaponName;
         newWeapon.SetActive(false);
         weaponSelector.weapons.Add(newWeapon);
+        return true;
 
 
     }
