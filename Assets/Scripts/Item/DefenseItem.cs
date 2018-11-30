@@ -7,11 +7,11 @@ public class DefenseItem : Item {
     public string itemToEffectName;
     private bool hasCollided = false;
 
-    public override bool Pickup(GameObject player)
+    public override void Pickup(GameObject player)
     {
 
         if (hasCollided)
-            return false;
+            return;
         hasCollided = true;
 
         if(itemToEffectName == "Health")
@@ -20,18 +20,16 @@ public class DefenseItem : Item {
             {
                 Debug.Log("Player Healed");
                 Destroy(gameObject);
-                return false;
-            } 
-            return true;
+                return;
+            }
         } else 
         {
             if(player.GetComponent<PlayerDefenseManager>().IncreaseArmor(quantity))
             {
                 Debug.Log("Player Armor Increased");
                 Destroy(gameObject);
-                return false;
+                return;
             }
-            return true;
         }
     }
 }

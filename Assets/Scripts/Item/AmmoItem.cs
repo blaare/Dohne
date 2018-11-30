@@ -7,11 +7,11 @@ public class AmmoItem : Item {
     public string weaponName;
     private bool hasCollided = false;
 
-    public override bool Pickup(GameObject player)
+    public override void Pickup(GameObject player)
     {
 
         if (hasCollided)
-            return false;
+            return;
         hasCollided = true;
 
         WeaponSelector weaponSelector = player.GetComponent<WeaponSelector>();
@@ -24,16 +24,16 @@ public class AmmoItem : Item {
                 {
                     Destroy(gameObject);
                     Debug.Log("Increased Ammo Count by " + quantity.ToString());
-                    return true;
+                    return;
                 }
                 else
                 {
                     hasCollided = false;
                     Debug.Log("Max Ammo Reached, Leaving object alone");
-                    return false;
+                    return;
                 }
             }
         }
-        return false;
+
     }
 }

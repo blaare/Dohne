@@ -53,16 +53,9 @@ public class PlayerController : MonoBehaviour {
     {
         if(collision.gameObject.tag == "item")
         {
-            if (!collision.gameObject.GetComponent<Item>().Pickup(gameObject))
-            {
-                collision.gameObject.GetComponent<BoxCollider>().enabled = false;
-            }
-        } 
-    }
+            collision.gameObject.GetComponent<Item>().Pickup(gameObject);
 
-    void OnCollisionExit(Collision collision)
-    {
-        collision.gameObject.GetComponent<BoxCollider>().enabled = true;
+        } 
     }
 
 }

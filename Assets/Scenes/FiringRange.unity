@@ -2378,55 +2378,40 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 164779148}
     m_Modifications:
-    - target: {fileID: 4261633659839632, guid: 44d5eddd223cf664eb3d54fadcc8951e, type: 2}
+    - target: {fileID: 4775015272933396, guid: 5a3dcc094f0a3e74daf10ef4735c6d3c, type: 2}
       propertyPath: m_LocalPosition.x
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 4261633659839632, guid: 44d5eddd223cf664eb3d54fadcc8951e, type: 2}
+    - target: {fileID: 4775015272933396, guid: 5a3dcc094f0a3e74daf10ef4735c6d3c, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4261633659839632, guid: 44d5eddd223cf664eb3d54fadcc8951e, type: 2}
+    - target: {fileID: 4775015272933396, guid: 5a3dcc094f0a3e74daf10ef4735c6d3c, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4261633659839632, guid: 44d5eddd223cf664eb3d54fadcc8951e, type: 2}
+    - target: {fileID: 4775015272933396, guid: 5a3dcc094f0a3e74daf10ef4735c6d3c, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4261633659839632, guid: 44d5eddd223cf664eb3d54fadcc8951e, type: 2}
+    - target: {fileID: 4775015272933396, guid: 5a3dcc094f0a3e74daf10ef4735c6d3c, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4261633659839632, guid: 44d5eddd223cf664eb3d54fadcc8951e, type: 2}
+    - target: {fileID: 4775015272933396, guid: 5a3dcc094f0a3e74daf10ef4735c6d3c, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4261633659839632, guid: 44d5eddd223cf664eb3d54fadcc8951e, type: 2}
+    - target: {fileID: 4775015272933396, guid: 5a3dcc094f0a3e74daf10ef4735c6d3c, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4261633659839632, guid: 44d5eddd223cf664eb3d54fadcc8951e, type: 2}
+    - target: {fileID: 4775015272933396, guid: 5a3dcc094f0a3e74daf10ef4735c6d3c, type: 2}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1945250108492784, guid: 44d5eddd223cf664eb3d54fadcc8951e, type: 2}
-      propertyPath: m_Name
-      value: BlueKeyCard
-      objectReference: {fileID: 0}
-    - target: {fileID: 114062547176669574, guid: 44d5eddd223cf664eb3d54fadcc8951e,
-        type: 2}
-      propertyPath: icon
-      value: 
-      objectReference: {fileID: 21300000, guid: c15db0733b7735945bbab72ba17ea5a4,
-        type: 3}
-    - target: {fileID: 23959887999545058, guid: 44d5eddd223cf664eb3d54fadcc8951e,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 26c42c75d0b983f4a8ca88ec1645fa22, type: 2}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 44d5eddd223cf664eb3d54fadcc8951e, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: 5a3dcc094f0a3e74daf10ef4735c6d3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &845719444
 GameObject:
@@ -3546,6 +3531,11 @@ Prefab:
       propertyPath: m_Name
       value: ScopedBlasterPickup (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 65468771816660252, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6, type: 2}
   m_IsPrefabAsset: 0
@@ -4658,7 +4648,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1509852487 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4261633659839632, guid: 44d5eddd223cf664eb3d54fadcc8951e,
+  m_CorrespondingSourceObject: {fileID: 4775015272933396, guid: 5a3dcc094f0a3e74daf10ef4735c6d3c,
     type: 2}
   m_PrefabInternal: {fileID: 783265156}
 --- !u!1001 &1541600984
@@ -4920,6 +4910,11 @@ Prefab:
     - target: {fileID: 1231242295883844, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6, type: 2}
       propertyPath: m_Name
       value: ScopedBlasterPickup (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 65468771816660252, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6, type: 2}
@@ -5967,7 +5962,6 @@ GameObject:
   - component: {fileID: 1929108975}
   - component: {fileID: 1929108978}
   - component: {fileID: 1929108977}
-  - component: {fileID: 1929108976}
   m_Layer: 14
   m_Name: Visor
   m_TagString: Untagged
@@ -5989,19 +5983,6 @@ Transform:
   m_Father: {fileID: 1337993431}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1929108976
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 65335867564771752, guid: 7da2da07c5c832a42b728aac63e790a2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1929108974}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1929108977
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6381,6 +6362,11 @@ Prefab:
     - target: {fileID: 1231242295883844, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6, type: 2}
       propertyPath: m_Name
       value: ScopedBlasterPickup (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 65468771816660252, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a6bd9744ed8a8d4f81028c85bf9c0f6, type: 2}
