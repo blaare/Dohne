@@ -7,10 +7,18 @@ public class PlayerController : MonoBehaviour {
 
     public Blaster currentBlaster;
     // Update is called once per frame
+    public PlayerDefenseManager playerDefenseManager;
 
     public Text ammoCount;
     public Text ammoInClip;
 
+    public Text currentHealth;
+    public Text currentArmor;
+
+    void Start()
+    {
+        playerDefenseManager = GetComponent<PlayerDefenseManager>();
+    }
 
 
 	void Update () {
@@ -29,8 +37,11 @@ public class PlayerController : MonoBehaviour {
 
     public void UpdateUI()
     {
-        ammoInClip.text = currentBlaster.ammoInClip.ToString();
-        ammoCount.text = currentBlaster.currentAmmo.ToString();
+        ammoInClip.text     = currentBlaster.ammoInClip.ToString();
+        ammoCount.text      = currentBlaster.currentAmmo.ToString();
+
+        currentHealth.text  = playerDefenseManager.health.ToString();
+        currentArmor.text   = playerDefenseManager.armor.ToString();
     }
 
 
