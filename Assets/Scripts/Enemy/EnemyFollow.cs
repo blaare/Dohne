@@ -1,47 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// Based on this tutorial: https://www.youtube.com/watch?v=ovEIluVrQjY&feature=youtu.be&t=451
 
 public class EnemyFollow : MonoBehaviour {
 
     public GameObject ThePlayer;
-    public float TargetDistance;
-    public float AllowedRange = 10;
+    public float DistanceFromHeardTarget;
+    public float DistanceFromSeenTarget;
+    public float HearingRange = 10;
     public GameObject TheEnemy;
     public float EnemySpeed;
     public int AttackTrigger;
-    public RaycastHit Shot;
+    public RaycastHit Hearing;
     RaycastHit Sight;
-    public float SightRange = 30;
+    public float SightRange = 20;
 
     void Update() {
         //see stuff in layer 14
         int layerMask = 1 << 14;
 
-        //This hits everything except layer 10
-        //layerMask = ~layerMask;
+        // If player is within "hearing range" or within line of sight.
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Hearing, HearingRange, layerMask) ||
+            Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Sight, SightRange, layerMask)) {
 
-        // If player is within line of sight
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Sight, SightRange, layerMask)) {
-            transform.LookAt(ThePlayer.transform);
-            Debug.Log("THE CUBE HAS SPOTTED YOU.");
-        }
+            DistanceFromHeardTarget = Hearing.distance;
+            DistanceFromSeenTarget = Sight.distance;
 
-        // If player is within range and can be "heard".
-        if (Physics.Raycast (transform.position, transform.TransformDirection(Vector3.forward), out Shot)) {
-            transform.LookAt(ThePlayer.transform);
-            TargetDistance = Shot.distance;
-            if (TargetDistance < AllowedRange) {
-                EnemySpeed = 0.02f;
+            if (DistanceFromHeardTarget < HearingRange || DistanceFromSeenTarget < SightRange) {
+                Debug.Log("CUBE THINKS YOU HAVE TOO MANY DIMENSIONS.");
+                transform.LookAt(ThePlayer.transform);
+                EnemySpeed = 0.08f;
                 if (AttackTrigger == 0) {
                     //TheEnemy.GetComponent<Animation>().Play("Walking");
                     transform.position = Vector3.MoveTowards(transform.position, ThePlayer.transform.position, EnemySpeed);
                 }
-            }
-            else {
-                EnemySpeed = 0;
-                //TheEnemy.GetComponent<Animation>().Play("Idle");
             }
         }
 
@@ -58,5 +50,6 @@ public class EnemyFollow : MonoBehaviour {
 
     void OnTriggerExit() {
         AttackTrigger = 0;
+        EnemySpeed = 0.02f;
     }
 }
