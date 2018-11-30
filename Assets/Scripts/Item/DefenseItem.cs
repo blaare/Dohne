@@ -20,7 +20,7 @@ public class DefenseItem : Item {
             {
                 Debug.Log("Player Healed");
                 Destroy(gameObject);
-            }
+            } 
             return;
         } else if(itemToEffectName == "Armor")
         {
@@ -28,7 +28,7 @@ public class DefenseItem : Item {
             {
                 Debug.Log("Player Armor Increased");
                 Destroy(gameObject);
-            }
+            } 
             return;
         }
     }

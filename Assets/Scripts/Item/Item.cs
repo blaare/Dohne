@@ -9,6 +9,7 @@ public abstract class Item : MonoBehaviour {
 
     public abstract void Pickup(GameObject player);
 
+
     void Update()
     {
         transform.Rotate(new Vector3(0, 50 * Time.deltaTime, 0));

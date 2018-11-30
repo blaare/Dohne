@@ -8,6 +8,8 @@ public class WeaponItem : Item {
     public string weaponName;
     private bool hasCollided = false;
     public Sprite icon;
+    
+    
 
     public override void Pickup(GameObject player)
     {
@@ -31,6 +33,7 @@ public class WeaponItem : Item {
                 }
                 else
                 {
+                   
                     hasCollided = false;
                     Debug.Log("Max Ammo Reached, Leaving object alone");
                     return;
