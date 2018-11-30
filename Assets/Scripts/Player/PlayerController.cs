@@ -5,12 +5,24 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
-    public Blaster currentBlaster;
-    // Update is called once per frame
+    
 
+    [Header("Set In Inspector")]
     public Text ammoCount;
     public Text ammoInClip;
 
+    public Text currentHealth;
+    public Text currentArmor;
+
+
+    [Header("Dynamically Set")]
+    public Blaster currentBlaster;
+    public PlayerDefenseManager playerDefenseManager;
+
+    void Start()
+    {
+        playerDefenseManager = GetComponent<PlayerDefenseManager>();
+    }
 
 
 	void Update () {
@@ -29,8 +41,11 @@ public class PlayerController : MonoBehaviour {
 
     public void UpdateUI()
     {
-        ammoInClip.text = currentBlaster.ammoInClip.ToString();
-        ammoCount.text = currentBlaster.currentAmmo.ToString();
+        ammoInClip.text     = currentBlaster.ammoInClip.ToString();
+        ammoCount.text      = currentBlaster.currentAmmo.ToString();
+
+        currentHealth.text  = playerDefenseManager.health.ToString();
+        currentArmor.text   = playerDefenseManager.armor.ToString();
     }
 
 
@@ -39,6 +54,7 @@ public class PlayerController : MonoBehaviour {
         if(collision.gameObject.tag == "item")
         {
             collision.gameObject.GetComponent<Item>().Pickup(gameObject);
+
         } 
     }
 

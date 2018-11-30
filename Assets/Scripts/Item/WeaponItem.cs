@@ -8,10 +8,12 @@ public class WeaponItem : Item {
     public string weaponName;
     private bool hasCollided = false;
     public Sprite icon;
+    
+    
 
     public override void Pickup(GameObject player)
     {
-
+        GetComponent<Collider>().enabled = false;
         if (hasCollided)
             return;
         hasCollided = true;
@@ -31,8 +33,10 @@ public class WeaponItem : Item {
                 }
                 else
                 {
+                   
                     hasCollided = false;
                     Debug.Log("Max Ammo Reached, Leaving object alone");
+                    GetComponent<Collider>().enabled = true;
                     return;
                 }
             }
@@ -48,6 +52,7 @@ public class WeaponItem : Item {
         newWeapon.name = weaponName;
         newWeapon.SetActive(false);
         weaponSelector.weapons.Add(newWeapon);
+        return;
 
 
     }
