@@ -5,15 +5,19 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
-    public Blaster currentBlaster;
-    // Update is called once per frame
-    public PlayerDefenseManager playerDefenseManager;
+    
 
+    [Header("Set In Inspector")]
     public Text ammoCount;
     public Text ammoInClip;
 
     public Text currentHealth;
     public Text currentArmor;
+
+
+    [Header("Dynamically Set")]
+    public Blaster currentBlaster;
+    public PlayerDefenseManager playerDefenseManager;
 
     void Start()
     {

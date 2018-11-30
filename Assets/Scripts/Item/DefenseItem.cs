@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DefenseItem : Item {
 
-    public string weaponName;
+    public string itemToEffectName;
     private bool hasCollided = false;
 
     public override void Pickup(GameObject player)
@@ -14,25 +14,22 @@ public class DefenseItem : Item {
             return;
         hasCollided = true;
 
-        WeaponSelector weaponSelector = player.GetComponent<WeaponSelector>();
-        //Make sure that you don't add duplicate weapons to the player's weapons list
-        foreach (GameObject weapon in weaponSelector.weapons)
+        if(itemToEffectName == "Health")
         {
-            if (weapon.gameObject.name == weaponName)
+            if (player.GetComponent<PlayerDefenseManager>().IncreaseHealth(quantity))
             {
-                if (weapon.GetComponent<Blaster>().IncreaseAmmo(quantity))
-                {
-                    Destroy(gameObject);
-                    Debug.Log("Increased Ammo Count by " + quantity.ToString());
-                    return;
-                }
-                else
-                {
-                    hasCollided = false;
-                    Debug.Log("Max Ammo Reached, Leaving object alone");
-                    return;
-                }
+                Debug.Log("Player Healed");
+                Destroy(gameObject);
             }
+            return;
+        } else if(itemToEffectName == "Armor")
+        {
+            if(player.GetComponent<PlayerDefenseManager>().IncreaseArmor(quantity))
+            {
+                Debug.Log("Player Armor Increased");
+                Destroy(gameObject);
+            }
+            return;
         }
     }
 }

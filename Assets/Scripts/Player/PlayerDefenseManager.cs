@@ -48,12 +48,15 @@ public class PlayerDefenseManager : MonoBehaviour {
      * Goal:    to increase the player's health by some amount.
      * 
      */ 
-    public void IncreaseHealth(int amount)
+    public bool IncreaseHealth(int amount)
     {
+        if (health == MAX_HEALTH)
+            return false;
         if (health + amount > MAX_HEALTH)
             health = MAX_HEALTH;
         else
             health += amount;
+        return true;
     }
 
     /**
@@ -61,11 +64,14 @@ public class PlayerDefenseManager : MonoBehaviour {
      * Goal:    to increase the player's armor by some amount
      * 
      */ 
-    public void IncreaseArmor(int amount)
+    public bool IncreaseArmor(int amount)
     {
+        if (armor == MAX_ARMOR)
+            return false;
         if (armor + amount > MAX_ARMOR)
             armor = MAX_ARMOR;
         else
-            armor += MAX_ARMOR;
+            armor += amount;
+        return true;
     }
 }
