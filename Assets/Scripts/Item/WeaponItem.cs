@@ -13,7 +13,6 @@ public class WeaponItem : Item {
 
     public override void Pickup(GameObject player)
     {
-        GetComponent<Collider>().enabled = false;
         if (hasCollided)
             return;
         hasCollided = true;
@@ -36,7 +35,6 @@ public class WeaponItem : Item {
                    
                     hasCollided = false;
                     Debug.Log("Max Ammo Reached, Leaving object alone");
-                    GetComponent<Collider>().enabled = true;
                     return;
                 }
             }

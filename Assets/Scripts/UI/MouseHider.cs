@@ -8,7 +8,18 @@ public class MouseHider : MonoBehaviour {
 	void Start () {
         if (!Application.isEditor)
         {
-            Cursor.visible = false;
+            HIDE_MOUSE();
         }
+    }
+    
+
+    public static void SHOW_MOUSE()
+    {
+        Cursor.visible = true;
+    }
+
+    public static void HIDE_MOUSE()
+    {
+        Cursor.visible = false;
     }
 }

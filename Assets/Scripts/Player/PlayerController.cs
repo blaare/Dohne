@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
     [Header("Dynamically Set")]
     public Blaster currentBlaster;
     public PlayerDefenseManager playerDefenseManager;
+    public static bool gameIsPaused = false;
 
     void Start()
     {
@@ -26,17 +27,37 @@ public class PlayerController : MonoBehaviour {
 
 
 	void Update () {
-
-        if (Input.GetMouseButtonDown(0))
+        if (!gameIsPaused)
         {
-            currentBlaster.Fire();
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                currentBlaster.Fire();
+            }
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                currentBlaster.Reload();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape) && !gameIsPaused)
+            {
+                GetComponent<PauseScreen>().PauseGame();
+                gameIsPaused = true;
+            }
+
+            UpdateUI();
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        else
         {
-            currentBlaster.Reload();
+            if (Input.GetKeyDown(KeyCode.Escape) && gameIsPaused)
+            {
+                GetComponent<PauseScreen>().ResumeGame();
+                gameIsPaused = false;
+            }
         }
 
-        UpdateUI();
+
+        
 	}
 
     public void UpdateUI()
