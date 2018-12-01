@@ -121,7 +121,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1785236167143268}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -139,4 +139,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quantity: 1
   icon: {fileID: 21300000, guid: c86a3e6542ff63f48a09c356ccc28990, type: 3}
-  keyCardColor: Red

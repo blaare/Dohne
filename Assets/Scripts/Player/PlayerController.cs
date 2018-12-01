@@ -70,19 +70,18 @@ public class PlayerController : MonoBehaviour {
     }
 
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collider)
     {
-        if(collision.gameObject.tag == "item")
+        if(collider.gameObject.tag == "item")
         {
-            collision.gameObject.GetComponent<Item>().Pickup(gameObject);
-
+            collider.gameObject.GetComponent<Item>().Pickup(gameObject);
         } 
 
-        if(collision.gameObject.tag == "door")
+        if(collider.gameObject.tag == "door")
         {
-            collision.gameObject.GetComponent<Door>().Open(gameObject);
-            collision.gameObject.GetComponent<Collider>().enabled = false;
+            collider.gameObject.GetComponent<Door>().Open(gameObject);
         }
     }
+
 
 }

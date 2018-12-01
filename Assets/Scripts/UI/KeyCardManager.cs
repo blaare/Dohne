@@ -7,7 +7,7 @@ public class KeyCardManager : MonoBehaviour {
 
     [Header("Set in Inspector")]
     public Image[] keyCardItems = new Image[3];
-    private List<string> keyCardColorsObtained = new List<string>();
+    public List<string> keyCardColorsObtained = new List<string>();
 
     /**
      * Function GotKeyCard
