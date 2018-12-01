@@ -77,6 +77,12 @@ public class PlayerController : MonoBehaviour {
             collision.gameObject.GetComponent<Item>().Pickup(gameObject);
 
         } 
+
+        if(collision.gameObject.tag == "door")
+        {
+            collision.gameObject.GetComponent<Door>().Open(gameObject);
+            collision.gameObject.GetComponent<Collider>().enabled = false;
+        }
     }
 
 }
