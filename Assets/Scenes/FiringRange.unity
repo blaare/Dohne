@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1806,6 +1806,62 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.4065056
       objectReference: {fileID: 0}
+    - target: {fileID: 1508817308227530, guid: b09191006fa14d64d97df0de8b286d1f, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255360762153682, guid: b09191006fa14d64d97df0de8b286d1f, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1473855195326084, guid: b09191006fa14d64d97df0de8b286d1f, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126028579636382, guid: b09191006fa14d64d97df0de8b286d1f, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1948240136530512, guid: b09191006fa14d64d97df0de8b286d1f, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136745042047588, guid: b09191006fa14d64d97df0de8b286d1f, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194446262319166, guid: b09191006fa14d64d97df0de8b286d1f, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705932544455028, guid: b09191006fa14d64d97df0de8b286d1f, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295079299156820, guid: b09191006fa14d64d97df0de8b286d1f, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1704000730544398, guid: b09191006fa14d64d97df0de8b286d1f, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1566780452735344, guid: b09191006fa14d64d97df0de8b286d1f, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011118863300308, guid: b09191006fa14d64d97df0de8b286d1f, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049658590350804, guid: b09191006fa14d64d97df0de8b286d1f, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359064062082736, guid: b09191006fa14d64d97df0de8b286d1f, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 95491499780641650, guid: b09191006fa14d64d97df0de8b286d1f, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b09191006fa14d64d97df0de8b286d1f, type: 2}
@@ -3304,9 +3360,10 @@ GameObject:
   - component: {fileID: 941309503}
   - component: {fileID: 941309502}
   - component: {fileID: 941309501}
-  m_Layer: 0
+  - component: {fileID: 941309506}
+  m_Layer: 10
   m_Name: RobotEnemy1
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3412,6 +3469,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 941309499}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &941309506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 941309499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42bd46182712c949881678592b934b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  damagePerHit: 0
+  hitsPerMinute: 0
+  attackChance: 0
 --- !u!1001 &962878319
 Prefab:
   m_ObjectHideFlags: 0
