@@ -16,11 +16,12 @@ public class EnemyFollow : MonoBehaviour {
     void Update() {
         if (chase) {
             EnemySpeed = 0.05f;
+            TheEnemy.GetComponent<Animation>().Play("Robo1 Run(loop)");
             transform.position = Vector3.MoveTowards(transform.position, ThePlayer.transform.position, EnemySpeed);
         }
         else {
             EnemySpeed = 0;
-            //TheEnemy.GetComponent<Animation>().Play("Idle");
+            TheEnemy.GetComponent<Animation>().Play("Robo1 Idle");
         }
 
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Shot, SightRange, layerMask) ||
@@ -28,7 +29,7 @@ public class EnemyFollow : MonoBehaviour {
             Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out Shot, SightRange, layerMask)) {
             transform.LookAt(ThePlayer.transform);
             if (MeleeAttackTrigger == 0) {
-                //TheEnemy.GetComponent<Animation>().Play("Walking");
+                TheEnemy.GetComponent<Animation>().Play("Robo1 Run start");
                 chase = true;
             }
             // if (Shot.distance < AttackRange)
@@ -37,8 +38,9 @@ public class EnemyFollow : MonoBehaviour {
         }
 
         if (MeleeAttackTrigger == 1) {
-            //TheEnemy.GetComponent<Animation>().Play("MeleeAttacking");
-            Debug.Log("CUBE HAS ENGAGED IN MELEE COMBAT.");
+            TheEnemy.GetComponent<Animation>().Play("Robo1 Run end");
+            TheEnemy.GetComponent<Animation>().Play("Robo1 Attack start");
+            TheEnemy.GetComponent<Animation>().Play("Robo1 Attack(loop)");
         }
     }
     void OnTriggerEnter() {
@@ -46,6 +48,7 @@ public class EnemyFollow : MonoBehaviour {
         MeleeAttackTrigger = 1;
     }
     void OnTriggerExit() {
+        TheEnemy.GetComponent<Animation>().Play("Robo1 Attack end");
         chase = true;
         MeleeAttackTrigger = 0;
     }
