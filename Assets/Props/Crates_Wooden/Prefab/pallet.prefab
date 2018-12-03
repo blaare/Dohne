@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4000014272081856}
   - component: {fileID: 33000013070442740}
   - component: {fileID: 23000011485870782}
-  - component: {fileID: 65546995407497414}
+  - component: {fileID: 65399672109396966}
   m_Layer: 0
   m_Name: pallet
   m_TagString: Untagged
@@ -35,9 +35,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011054024648}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 1.3414708, y: 0.0000003686741, z: -3.0926707}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 41.70311, y: 0, z: 45.5497}
+  m_LocalScale: {x: 100, y: 99.99997, z: 99.99997}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -84,7 +84,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011054024648}
   m_Mesh: {fileID: 4300000, guid: dd1483194cad0d4449f1395a1a2b8577, type: 3}
---- !u!65 &65546995407497414
+--- !u!65 &65399672109396966
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

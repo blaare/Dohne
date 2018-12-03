@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4000011455010850}
   - component: {fileID: 33000010472558280}
   - component: {fileID: 23000012342716130}
+  - component: {fileID: 65160092517422568}
   m_Layer: 0
   m_Name: crate5
   m_TagString: Untagged
@@ -34,9 +35,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010982715820}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -35.96404, y: -0.000002482236, z: 20.8225}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 28.621092, y: 0, z: 44.909138}
+  m_LocalScale: {x: 100, y: 99.99997, z: 99.99997}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,3 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010982715820}
   m_Mesh: {fileID: 4300000, guid: e80a516591f24a14baa830552726073f, type: 3}
+--- !u!65 &65160092517422568
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010982715820}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.042066775, y: 0.040135596, z: 0.01768194}
+  m_Center: {x: -0.0024763476, y: 0.0046377503, z: 0.007835106}

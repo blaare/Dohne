@@ -8,6 +8,7 @@ ModelImporter:
     2100000: unnamed
     2100002: Floor
     2100004: Walls
+    2100006: Ceiling
     2300000: //RootNode
     3300000: //RootNode
     4300000: Plane_013
