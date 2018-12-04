@@ -170,4 +170,4 @@ MonoBehaviour:
   weaponPrefab: {fileID: 1713207764944384, guid: a72402be90d6cf7499c4fba9dfa9f040,
     type: 2}
   weaponName: Rifle
-  icon: {fileID: 21300000, guid: a82b8ffee6e78874ba6e59c22ab6d8ec, type: 3}
+  icon: {fileID: 21300010, guid: 081526502edf7f94faf0fb46d4d315d3, type: 3}

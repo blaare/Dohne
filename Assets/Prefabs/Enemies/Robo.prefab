@@ -220,7 +220,6 @@ GameObject:
   - component: {fileID: 4604822894007344}
   - component: {fileID: 95466563907441976}
   - component: {fileID: 114358349474616712}
-  - component: {fileID: 114969572075650760}
   - component: {fileID: 65940111207187178}
   - component: {fileID: 111111677324937540}
   m_Layer: 10
@@ -487,28 +486,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7faaa0a4858ef145aa5e2f281916e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  damagePerHit: 1
+  hitsPerMinute: 0
+  attackChance: 0
   ThePlayer: {fileID: 0}
   chase: 0
-  TargetDistance: 0
-  SightRange: 10
+  SightRange: 30
   TheEnemy: {fileID: 1989589207012240}
   EnemySpeed: 0.05
-  MeleeAttackTrigger: 0
---- !u!114 &114969572075650760
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1989589207012240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a42bd46182712c949881678592b934b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  damagePerHit: 10
-  hitsPerMinute: 10
-  attackChance: 0.5
+  attackSpeed: 1
 --- !u!137 &137071745287411682
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
