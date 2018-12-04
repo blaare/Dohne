@@ -3603,8 +3603,8 @@ MonoBehaviour:
   TheEnemy: {fileID: 1397865858}
   EnemySpeed: 0.05
   health: 3
-  damagePerHit: 2
-  attackSpeed: 1
+  damagePerHit: 1
+  attackSpeed: 2
 --- !u!4 &1731712082 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4058051056209284, guid: 93ceea070fa72344981f7974ff1e4209,
