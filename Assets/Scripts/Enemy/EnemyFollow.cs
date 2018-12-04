@@ -20,7 +20,7 @@ public class EnemyFollow : MonoBehaviour {
             Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out Shot, SightRange, layerMask)) {
             transform.LookAt(ThePlayer.transform);
             chase = true;
-            if (Shot.distance < AttackRange) {
+            if (Shot.distance <= AttackRange) {
                 TheEnemy.GetComponent<Animation>().Play("Robo1 Attack(loop)");
                 Debug.Log("CUBE IS FIRING AT YOU.");
             }
