@@ -56,7 +56,7 @@ public class WeaponSelector : MonoBehaviour {
      */ 
     public void DeSelectWeapon(int index)
     {
-        weaponIcons[index].color = Color.white;
+        weaponIcons[index].color = Color.black;
         weapons[index].SetActive(false);
     }
 
@@ -66,7 +66,7 @@ public class WeaponSelector : MonoBehaviour {
      */ 
     public void SelectWeapon(int index)
     {
-        weaponIcons[index].color = Color.black;
+        weaponIcons[index].color = Color.white;
         weapons[index].SetActive(true);
         //weapons[index].transform.position = transform.GetChild(2).transform.position;
 
