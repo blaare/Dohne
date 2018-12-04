@@ -3599,12 +3599,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ThePlayer: {fileID: 1337993422}
   chase: 0
-  TargetDistance: 0
-  SightRange: 10
-  AttackRange: 10
+  SightRange: 20
   TheEnemy: {fileID: 1397865858}
   EnemySpeed: 0.05
-  MeleeAttackTrigger: 0
+  health: 3
+  damagePerHit: 2
+  attackSpeed: 1
 --- !u!4 &1731712082 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4058051056209284, guid: 93ceea070fa72344981f7974ff1e4209,
