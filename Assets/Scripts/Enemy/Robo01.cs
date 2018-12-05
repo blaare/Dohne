@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace Pathfinding {
     public class Robo01 : Enemy {
         public GameObject ThePlayer;
         public GameObject TheEnemy;
-        public GameObject PatrolStart;
-        public GameObject PatrolEnd;
+        public GameObject[] PatrolPoints;
         RaycastHit Shot;
         private float attackDelayCounter = 0.0f;
+        private int patrolCycleCounter = 0;
         private bool chase = false;
         public float attackRange = 20;
         public float sightRange = 30;
@@ -18,7 +19,7 @@ namespace Pathfinding {
 
         private void Start() {
             TheEnemy.GetComponent<Animation>().Play("Robo1 Walk start");
-            GetComponent<AIDestinationSetter>().target = PatrolStart.transform;
+            GetComponent<AIDestinationSetter>().target = PatrolPoints[0].transform;
         }
 
         void Update() {
@@ -50,12 +51,13 @@ namespace Pathfinding {
             else {
                 TheEnemy.GetComponent<Animation>().Play("Robo1 Walk(loop)");
                 if (GetComponent<AIPath>().reachedDestination) {
-                    if (GetComponent<AIDestinationSetter>().target == PatrolStart.transform) {
-                        GetComponent<AIDestinationSetter>().target = PatrolEnd.transform;
+                    if (PatrolPoints[patrolCycleCounter] != PatrolPoints.Last()) {
+                        patrolCycleCounter++;
                     }
                     else {
-                        GetComponent<AIDestinationSetter>().target = PatrolStart.transform;
+                        patrolCycleCounter = 0;
                     }
+                    GetComponent<AIDestinationSetter>().target = PatrolPoints[patrolCycleCounter].transform;
                 }
             }
         }

@@ -1891,7 +1891,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4140017134860228, guid: ecc04166ea8ec7648a565a973124495b, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1415330407664934, guid: ecc04166ea8ec7648a565a973124495b, type: 2}
       propertyPath: m_Name
@@ -2345,7 +2345,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4201802202030174, guid: 7da2da07c5c832a42b728aac63e790a2, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224550652760544426, guid: 7da2da07c5c832a42b728aac63e790a2,
         type: 2}
@@ -3339,7 +3339,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4140017134860228, guid: ecc04166ea8ec7648a565a973124495b, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecc04166ea8ec7648a565a973124495b, type: 2}
@@ -3375,6 +3375,52 @@ Transform:
   m_Father: {fileID: 636688453}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1603153352
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4140017134860228, guid: ecc04166ea8ec7648a565a973124495b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 19.357122
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140017134860228, guid: ecc04166ea8ec7648a565a973124495b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.0424847e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140017134860228, guid: ecc04166ea8ec7648a565a973124495b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -22.709332
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140017134860228, guid: ecc04166ea8ec7648a565a973124495b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140017134860228, guid: ecc04166ea8ec7648a565a973124495b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140017134860228, guid: ecc04166ea8ec7648a565a973124495b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140017134860228, guid: ecc04166ea8ec7648a565a973124495b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140017134860228, guid: ecc04166ea8ec7648a565a973124495b, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415330407664934, guid: ecc04166ea8ec7648a565a973124495b, type: 2}
+      propertyPath: m_Name
+      value: PatrolMarker (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ecc04166ea8ec7648a565a973124495b, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1644662773
 GameObject:
   m_ObjectHideFlags: 0
@@ -3822,8 +3868,10 @@ MonoBehaviour:
   attackChance: 0
   ThePlayer: {fileID: 1337993422}
   TheEnemy: {fileID: 1397865858}
-  PatrolStart: {fileID: 393063854}
-  PatrolEnd: {fileID: 1663845494}
+  PatrolPoints:
+  - {fileID: 393063854}
+  - {fileID: 2126221368}
+  - {fileID: 1663845494}
   attackRange: 20
   sightRange: 30
   EnemySpeed: 0.05
@@ -4674,6 +4722,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4116606026337162, guid: daaba441e2b3f7d48af76ec1cab8ea8d,
     type: 2}
   m_PrefabInternal: {fileID: 1855792548}
+--- !u!1 &2126221368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1415330407664934, guid: ecc04166ea8ec7648a565a973124495b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1603153352}
 --- !u!1 &2136933300
 GameObject:
   m_ObjectHideFlags: 0
