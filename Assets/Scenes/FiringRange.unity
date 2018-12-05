@@ -2011,6 +2011,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1723812845}
     m_Modifications:
+    - target: {fileID: 111111677324937540, guid: 665d1b5a64a7a5045af14e7b20554ab0,
+        type: 2}
+      propertyPath: m_Animations.Array.size
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4604822894007344, guid: 665d1b5a64a7a5045af14e7b20554ab0, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.0115680685
@@ -2064,6 +2069,16 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 111111677324937540, guid: 665d1b5a64a7a5045af14e7b20554ab0,
+        type: 2}
+      propertyPath: m_Animations.Array.data[7]
+      value: 
+      objectReference: {fileID: 7400000, guid: dedbfe0039d24494aa275f8711f84fa4, type: 2}
+    - target: {fileID: 111111677324937540, guid: 665d1b5a64a7a5045af14e7b20554ab0,
+        type: 2}
+      propertyPath: m_Animations.Array.data[8]
+      value: 
+      objectReference: {fileID: 7400000, guid: 05fd922873174ec45b6a588ff257c560, type: 2}
     m_RemovedComponents:
     - {fileID: 114358349474616712, guid: 665d1b5a64a7a5045af14e7b20554ab0, type: 2}
     - {fileID: 114969572075650760, guid: 665d1b5a64a7a5045af14e7b20554ab0, type: 2}
@@ -3601,15 +3616,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7faaa0a4858ef145aa5e2f281916e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 100
   damagePerHit: 1
   hitsPerMinute: 0
   attackChance: 0
   ThePlayer: {fileID: 1337993422}
-  chase: 0
+  TheEnemy: {fileID: 1397865858}
   attackRange: 20
   sightRange: 30
-  TheEnemy: {fileID: 1397865858}
   EnemySpeed: 0.05
   attackDelay: 0.5
 --- !u!4 &1731712082 stripped

@@ -13,11 +13,6 @@ public class TestEnemy : Enemy {
         }
     }
 
-    public override void Attack()
-    {
-        throw new System.NotImplementedException();
-    }
-
     public override void Die()
     {
         Destroy(gameObject);

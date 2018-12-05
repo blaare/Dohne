@@ -12,6 +12,4 @@ public abstract class Enemy : MonoBehaviour {
     public abstract void Die();
 
     public abstract void TakeHit(int damage);
-
-    public abstract void Attack();
 }
