@@ -4,13 +4,14 @@ using UnityEngine;
 // Based on this tutorial: https://www.youtube.com/watch?v=ovEIluVrQjY&feature=youtu.be&t=451
 public class Robo01 : Enemy {
     public GameObject ThePlayer;
+    private float attackDelayCounter = 0.0f;
     public bool chase = false;
     public float attackRange = 20;
     public float sightRange = 30;
     public GameObject TheEnemy;
     public float EnemySpeed = 0.05f;
     public RaycastHit Shot;
-    public float attackSpeed = 3;
+    public float attackDelay = 1.0f;
     int layerMask = 1 << 14;
 
     void Update() {
@@ -23,7 +24,11 @@ public class Robo01 : Enemy {
         if (chase) {
             if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Shot, attackRange)
                 && Shot.transform.tag == "Player"){
-                Attack();
+                if (Time.time >= attackDelayCounter) {
+                    TheEnemy.GetComponent<Animation>().Play("Robo1 Attack(loop)");
+                    ThePlayer.GetComponent<PlayerDefenseManager>().TakeDamage(damagePerHit);
+                    attackDelayCounter = Time.time + attackDelay;
+                }
             }
             else {
                 transform.LookAt(ThePlayer.transform);
@@ -46,7 +51,6 @@ public class Robo01 : Enemy {
     }
 
     public override void Attack() {
-        TheEnemy.GetComponent<Animation>().Play("Robo1 Attack(loop)");
-        ThePlayer.GetComponent<PlayerDefenseManager>().TakeDamage(damagePerHit);
+        
     }
 }
