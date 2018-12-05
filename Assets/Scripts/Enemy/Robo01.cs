@@ -21,7 +21,8 @@ public class Robo01 : Enemy {
             chase = true;
         }
         if (chase) {
-            if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Shot, attackRange, layerMask)){
+            if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Shot, attackRange)
+                && Shot.transform.tag == "Player"){
                 Attack();
             }
             else {
