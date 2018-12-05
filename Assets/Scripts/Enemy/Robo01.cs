@@ -6,6 +6,8 @@ namespace Pathfinding {
     public class Robo01 : Enemy {
         public GameObject ThePlayer;
         public GameObject TheEnemy;
+        public GameObject PatrolStart;
+        public GameObject PatrolEnd;
         RaycastHit Shot;
         private float attackDelayCounter = 0.0f;
         private bool chase = false;
@@ -14,11 +16,17 @@ namespace Pathfinding {
         public float EnemySpeed = 0.05f;
         public float attackDelay = 1.0f;
 
+        private void Start() {
+            TheEnemy.GetComponent<Animation>().Play("Robo1 Walk start");
+            GetComponent<AIDestinationSetter>().target = PatrolStart.transform;
+        }
+
         void Update() {
             Vector3 targetDir = ThePlayer.transform.position - transform.position;
             float distance = Vector3.Distance(targetDir, transform.forward);
             float angle = Vector3.Angle(targetDir, transform.forward);
             if (angle < 30 && distance < sightRange && !chase) {
+                TheEnemy.GetComponent<Animation>().Play("Robo1 Walk end");
                 TheEnemy.GetComponent<Animation>().Play("Robo1 Run start");
                 chase = true;
             }
@@ -37,6 +45,17 @@ namespace Pathfinding {
                 else {
                     TheEnemy.GetComponent<Animation>().Play("Robo1 Run(loop)");
                     GetComponent<AIPath>().canMove = true;
+                }
+            }
+            else {
+                TheEnemy.GetComponent<Animation>().Play("Robo1 Walk(loop)");
+                if (GetComponent<AIPath>().reachedDestination) {
+                    if (GetComponent<AIDestinationSetter>().target == PatrolStart.transform) {
+                        GetComponent<AIDestinationSetter>().target = PatrolEnd.transform;
+                    }
+                    else {
+                        GetComponent<AIDestinationSetter>().target = PatrolStart.transform;
+                    }
                 }
             }
         }
