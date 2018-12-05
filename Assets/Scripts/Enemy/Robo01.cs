@@ -20,7 +20,6 @@ namespace Pathfinding {
         public float attackDelay = 1.0f;
 
         private void Start() {
-            TheEnemy.GetComponent<Animation>().Play("Robo1 Walk start");
             GetComponent<AIDestinationSetter>().target = PatrolPoints[0].transform;
         }
 
@@ -31,8 +30,6 @@ namespace Pathfinding {
                     float distance = Vector3.Distance(targetDir, transform.forward);
                     float angle = Vector3.Angle(targetDir, transform.forward);
                     if (angle < 30 && distance < sightRange && !chase) {
-                        TheEnemy.GetComponent<Animation>().Play("Robo1 Walk end");
-                        TheEnemy.GetComponent<Animation>().Play("Robo1 Run start");
                         chase = true;
                     }
                     if (chase) {
