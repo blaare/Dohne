@@ -2060,6 +2060,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.6756757
       objectReference: {fileID: 0}
+    - target: {fileID: 1989589207012240, guid: 665d1b5a64a7a5045af14e7b20554ab0, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114358349474616712, guid: 665d1b5a64a7a5045af14e7b20554ab0, type: 2}
     - {fileID: 114969572075650760, guid: 665d1b5a64a7a5045af14e7b20554ab0, type: 2}
@@ -3510,7 +3514,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1723812844}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.17, y: 1.61, z: -24.144419}
+  m_LocalPosition: {x: 47.59, y: 1.45, z: -48.18}
   m_LocalScale: {x: 1.2, y: 2.7, z: 1.48}
   m_Children:
   - {fileID: 833436145}
@@ -3597,13 +3601,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7faaa0a4858ef145aa5e2f281916e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThePlayer: {fileID: 1337993422}
-  chase: 0
-  SightRange: 20
-  TheEnemy: {fileID: 1397865858}
-  EnemySpeed: 0.05
   health: 3
   damagePerHit: 1
+  hitsPerMinute: 0
+  attackChance: 0
+  ThePlayer: {fileID: 1337993422}
+  chase: 0
+  attackRange: 20
+  TheEnemy: {fileID: 1397865858}
+  EnemySpeed: 0.05
   attackSpeed: 2
 --- !u!4 &1731712082 stripped
 Transform:
