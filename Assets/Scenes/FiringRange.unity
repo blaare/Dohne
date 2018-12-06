@@ -2065,7 +2065,7 @@ Prefab:
     - target: {fileID: 111111677324937540, guid: 665d1b5a64a7a5045af14e7b20554ab0,
         type: 2}
       propertyPath: m_Animations.Array.size
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4604822894007344, guid: 665d1b5a64a7a5045af14e7b20554ab0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2145,6 +2145,41 @@ Prefab:
       propertyPath: m_Animations.Array.data[11]
       value: 
       objectReference: {fileID: 7400000, guid: 8042d44736f3ee44583dadebdab1d833, type: 2}
+    - target: {fileID: 111111677324937540, guid: 665d1b5a64a7a5045af14e7b20554ab0,
+        type: 2}
+      propertyPath: m_Animations.Array.data[5]
+      value: 
+      objectReference: {fileID: 7400000, guid: f3ae33655aa45a249a6f24ea56c23aa2, type: 2}
+    - target: {fileID: 111111677324937540, guid: 665d1b5a64a7a5045af14e7b20554ab0,
+        type: 2}
+      propertyPath: m_Animations.Array.data[6]
+      value: 
+      objectReference: {fileID: 7400000, guid: 0042af3a39a9b024e9972270cf77ae14, type: 2}
+    - target: {fileID: 111111677324937540, guid: 665d1b5a64a7a5045af14e7b20554ab0,
+        type: 2}
+      propertyPath: m_Animations.Array.data[2]
+      value: 
+      objectReference: {fileID: 7400000, guid: 0042af3a39a9b024e9972270cf77ae14, type: 2}
+    - target: {fileID: 111111677324937540, guid: 665d1b5a64a7a5045af14e7b20554ab0,
+        type: 2}
+      propertyPath: m_Animations.Array.data[0]
+      value: 
+      objectReference: {fileID: 7400000, guid: e2212290fd82cda43aa86679fbcbd674, type: 2}
+    - target: {fileID: 111111677324937540, guid: 665d1b5a64a7a5045af14e7b20554ab0,
+        type: 2}
+      propertyPath: m_Animations.Array.data[1]
+      value: 
+      objectReference: {fileID: 7400000, guid: 8042d44736f3ee44583dadebdab1d833, type: 2}
+    - target: {fileID: 111111677324937540, guid: 665d1b5a64a7a5045af14e7b20554ab0,
+        type: 2}
+      propertyPath: m_Animations.Array.data[3]
+      value: 
+      objectReference: {fileID: 7400000, guid: dedbfe0039d24494aa275f8711f84fa4, type: 2}
+    - target: {fileID: 111111677324937540, guid: 665d1b5a64a7a5045af14e7b20554ab0,
+        type: 2}
+      propertyPath: m_Animations.Array.data[4]
+      value: 
+      objectReference: {fileID: 7400000, guid: 05fd922873174ec45b6a588ff257c560, type: 2}
     m_RemovedComponents:
     - {fileID: 114358349474616712, guid: 665d1b5a64a7a5045af14e7b20554ab0, type: 2}
     - {fileID: 114969572075650760, guid: 665d1b5a64a7a5045af14e7b20554ab0, type: 2}
