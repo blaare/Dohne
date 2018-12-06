@@ -990,8 +990,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1981410458852772}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -51.6, y: 1, z: 29.2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -32.62, y: 1.12, z: -7.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4053984799197060}
@@ -2643,8 +2643,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782d1b8edde53ad499b320ff48296fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lateralMovementSpeed: 3
-  longitudinalMovementSpeed: 3
+  lateralMovementSpeed: 5
+  longitudinalMovementSpeed: 5
   yRotationSensitivity: 100
   sprintModifier: 2
   sprintLookModifier: 2

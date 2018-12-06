@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RaycastBlaster :  Blaster{
-
+    private float nextFireTime = 0;
 
     public override void Fire()
     {
@@ -15,6 +15,10 @@ public class RaycastBlaster :  Blaster{
 
         if(ammoInClip > 0)
         {
+            if (nextFireTime < Time.time)
+                nextFireTime = Time.time + fireRate;
+            else
+                return;
             shotParticleSystem.Stop();
             shotParticleSystem.Play();
             RaycastHit hit;

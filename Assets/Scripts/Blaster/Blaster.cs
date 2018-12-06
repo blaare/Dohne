@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Blaster : MonoBehaviour {
 
-    public int fireRate;
+    public float fireRate;
     public int damagePerShot;
 
     public int ammoInClip;

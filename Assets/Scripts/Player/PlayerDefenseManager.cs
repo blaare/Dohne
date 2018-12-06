@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDefenseManager : MonoBehaviour {
 
@@ -8,6 +9,8 @@ public class PlayerDefenseManager : MonoBehaviour {
     public const int MAX_ARMOR = 200;
     public int health = 100;
     public const int MAX_HEALTH = 100;
+
+
 
     /**
      * Function TakeDamage
@@ -33,7 +36,7 @@ public class PlayerDefenseManager : MonoBehaviour {
         //Handle the case of player's health is effected.
         if(health - amount < 0)
         {
-            Debug.Log("Player Died");
+            SceneManager.LoadScene(0);
             return;
         }
         else

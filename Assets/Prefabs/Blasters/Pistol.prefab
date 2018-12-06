@@ -1354,7 +1354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af779c55d70597458dc8f680d6f4f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 10
+  fireRate: 0.2
   damagePerShot: 20
   ammoInClip: 10
   clipSize: 10

@@ -7,6 +7,7 @@ public class ProjectileBlaster : Blaster
     public GameObject projectile;
     public float bulletSpeed = 20f;
     public Transform bulletSpawn;
+    private float nextFireTime = 0;
 
     public override void Fire()
     {
@@ -14,6 +15,10 @@ public class ProjectileBlaster : Blaster
 
         if (ammoInClip > 0)
         {
+            if (nextFireTime < Time.time)
+                nextFireTime = Time.time + fireRate;
+            else
+                return;
             //Handle the Firing animation with a particle system
             shotParticleSystem.Stop();
             shotParticleSystem.Play();
