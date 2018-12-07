@@ -4280,10 +4280,10 @@ GameObject:
   - component: {fileID: 1723812847}
   - component: {fileID: 1723812846}
   - component: {fileID: 1723812849}
-  - component: {fileID: 1723812850}
   - component: {fileID: 1723812853}
   - component: {fileID: 1723812852}
   - component: {fileID: 1723812851}
+  - component: {fileID: 1723812850}
   m_Layer: 10
   m_Name: RoboEnemy1
   m_TagString: Untagged
@@ -4388,29 +4388,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 1723812844}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7faaa0a4858ef145aa5e2f281916e08, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b22d7aeb8eed6a48a3c8e45b0f6fff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  damagePerHit: 1
-  hitsPerMinute: 0
-  attackChance: 0
+  health: 70
+  damagePerHit: 7
+  attackRange: 22.5
+  sightRange: 2000
+  sightFOV: 90
+  EnemySpeed: 4
+  attackDelay: 0.016
+  patrolAnimation: Robo1 Walk(loop)
+  chaseAnimation: Robo1 Run(loop)
+  attackAnimation: Robo1 Attack(loop)
+  damageAnimation: Robo1 Getting damage
+  dieAnimation: Robo1 Die
   ThePlayer: {fileID: 1337993422}
   TheEnemy: {fileID: 1397865858}
   PatrolPoints:
   - {fileID: 393063854}
   - {fileID: 2126221368}
   - {fileID: 1663845494}
-  patrolling: {fileID: 46397496}
-  beginChase: {fileID: 1968222985}
-  chasing: {fileID: 2089397640}
-  attacking: {fileID: 411310207}
-  dying: {fileID: 1197005174}
-  takingDamage: {fileID: 1385533081}
-  attackRange: 20
-  sightRange: 30
-  EnemySpeed: 0.05
-  attackDelay: 0.5
+  patrolSFX: {fileID: 46397496}
+  beginChaseSFX: {fileID: 1968222985}
+  chaseSFX: {fileID: 2089397640}
+  attackSFX: {fileID: 411310207}
+  dieSFX: {fileID: 1197005174}
+  damageSFX: {fileID: 1385533081}
 --- !u!114 &1723812851
 MonoBehaviour:
   m_ObjectHideFlags: 0
