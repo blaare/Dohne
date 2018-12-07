@@ -8,6 +8,12 @@ namespace Pathfinding {
         public GameObject ThePlayer;
         public GameObject TheEnemy;
         public GameObject[] PatrolPoints;
+        public AudioSource patrolling;
+        public AudioSource beginChase;
+        public AudioSource chasing;
+        public AudioSource attacking;
+        public AudioSource dying;
+        public AudioSource takingDamage;
         RaycastHit Shot;
         private bool dead = false;
         private bool stun = false;
@@ -30,16 +36,22 @@ namespace Pathfinding {
                     float distance = Vector3.Distance(targetDir, transform.forward);
                     float angle = Vector3.Angle(targetDir, transform.forward);
                     if (angle < 30 && distance < sightRange && !chase) {
+                        patrolling.Stop();
+                        beginChase.Play();
                         chase = true;
                     }
                     if (chase) {
+                        if (!chasing.isPlaying)
+                            chasing.Play();
                         transform.LookAt(ThePlayer.transform);
                         GetComponent<AIDestinationSetter>().target = ThePlayer.transform;
                         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Shot, attackRange)
                             && Shot.transform.tag == "Player") {
                             GetComponent<AIPath>().canMove = false;
+                            chasing.Stop();
                             if (Time.time >= attackDelayCounter) {
                                 TheEnemy.GetComponent<Animation>().Play("Robo1 Attack(loop)");
+                                attacking.Play();
                                 ThePlayer.GetComponent<PlayerDefenseManager>().TakeDamage(damagePerHit);
                                 attackDelayCounter = Time.time + attackDelay;
                             }
@@ -47,10 +59,14 @@ namespace Pathfinding {
                         else {
                             TheEnemy.GetComponent<Animation>().Play("Robo1 Run(loop)");
                             GetComponent<AIPath>().canMove = true;
+                            attacking.Stop();
                         }
                     }
                     else {
                         TheEnemy.GetComponent<Animation>().Play("Robo1 Walk(loop)");
+                        if (!patrolling.isPlaying) {
+                            patrolling.Play();
+                        }
                         if (GetComponent<AIPath>().reachedDestination) {
                             if (PatrolPoints[patrolCycleCounter] != PatrolPoints.Last()) {
                                 patrolCycleCounter++;
@@ -85,8 +101,17 @@ namespace Pathfinding {
             health -= damage;
             stun = true;
             chase = true;
+            beginChase.Stop();
+            attacking.Stop();
+            patrolling.Stop();
+            chasing.Stop();
+            takingDamage.Stop();
             if (health <= 0) {
                 dead = true;
+                dying.Play();
+            }
+            else {
+                takingDamage.Play();
             }
         }
     }
