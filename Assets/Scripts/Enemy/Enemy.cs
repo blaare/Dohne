@@ -106,6 +106,14 @@ public class Enemy : MonoBehaviour {
             ThePlayer.GetComponent<PlayerDefenseManager>().TakeDamage(damagePerHit);
             attackDelayCounter = Time.time + attackDelay;
         }
+        else {
+            if(!EnemyAnimations.IsPlaying(attackAnimation))
+                EnemyAnimations.Play(chaseAnimation);
+        }
+    }
+
+    private void stopAttackAnimation() {
+        EnemyAnimations.Stop(attackAnimation);
     }
 
     private void Patrol() {
