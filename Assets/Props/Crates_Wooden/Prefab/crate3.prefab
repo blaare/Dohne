@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4000010472567922}
   - component: {fileID: 33000011781503762}
   - component: {fileID: 23000012300990832}
-  - component: {fileID: 65237107055372080}
+  - component: {fileID: 65840208672277274}
   m_Layer: 0
   m_Name: crate3
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014110450826}
   m_Mesh: {fileID: 4300000, guid: 70434f2ce3ace324f9dde96ec59499c1, type: 3}
---- !u!65 &65237107055372080
+--- !u!65 &65840208672277274
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,5 +94,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0382584, y: 0.031580344, z: 0.021643603}
-  m_Center: {x: 0, y: 0.013142418, z: 0.010821802}
+  m_Size: {x: 0.0191292, y: 0.015790172, z: 0.010821802}
+  m_Center: {x: 0, y: 0.006571209, z: 0.005410901}

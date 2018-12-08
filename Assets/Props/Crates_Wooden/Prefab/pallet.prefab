@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4000014272081856}
   - component: {fileID: 33000013070442740}
   - component: {fileID: 23000011485870782}
-  - component: {fileID: 65399672109396966}
+  - component: {fileID: 65715561186296576}
   m_Layer: 0
   m_Name: pallet
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011054024648}
   m_Mesh: {fileID: 4300000, guid: dd1483194cad0d4449f1395a1a2b8577, type: 3}
---- !u!65 &65399672109396966
+--- !u!65 &65715561186296576
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,5 +94,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0382584, y: 0.030925946, z: 0.0060738083}
-  m_Center: {x: 0, y: 0.013469619, z: 0.0030369041}
+  m_Size: {x: 0.0191292, y: 0.015462974, z: 0.0030369041}
+  m_Center: {x: 0, y: 0.00673481, z: 0.0015184521}

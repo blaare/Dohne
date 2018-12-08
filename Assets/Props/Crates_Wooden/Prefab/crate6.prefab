@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4000012964909780}
   - component: {fileID: 33000011125026940}
   - component: {fileID: 23000013382355054}
-  - component: {fileID: 65604674454813278}
+  - component: {fileID: 65893322825338394}
   m_Layer: 0
   m_Name: crate6
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012204644232}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 34.686005, y: 1, z: 44.22534}
+  m_LocalPosition: {x: 34.686005, y: 0.61, z: 44.22534}
   m_LocalScale: {x: 100, y: 99.99997, z: 99.99997}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,7 +84,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012204644232}
   m_Mesh: {fileID: 4300000, guid: a223f715ea0cf474c8c7902996fc7336, type: 3}
---- !u!65 &65604674454813278
+--- !u!65 &65893322825338394
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,5 +94,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.043824665, y: 0.027068442, z: 0.01792036}
-  m_Center: {x: 0.0000000027939677, y: -0.0000013671813, z: -0.001556105}
+  m_Size: {x: 0.021912333, y: 0.013534222, z: 0.008960181}
+  m_Center: {x: 0.0000000013969839, y: -0.0000006835907, z: -0.0007780525}
