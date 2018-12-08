@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour {
     public  string              attackAnimation;
     public  string              damageAnimation;
     public  string              dieAnimation;
-    public  GameObject          Flash;
+    public  GameObject          Flash = null;
     public  GameObject          ThePlayer;
     public  GameObject          TheEnemy;
     public  GameObject[]        PatrolPoints;
@@ -61,6 +61,7 @@ public class Enemy : MonoBehaviour {
             }
         }
         else {
+            AI.canMove = false;
             EnemyAnimations.Play(dieAnimation);
             Invoke("Die", EnemyAnimations.GetClip(dieAnimation).length);
         }
@@ -100,15 +101,19 @@ public class Enemy : MonoBehaviour {
         chaseSFX.Stop();
         if (Time.time >= attackDelayCounter) {
             attackSFX.Play();
-            Flash.SetActive(true);
-            Invoke("MuzzleOff", 0.12f);
+            if(Flash != null) {
+                Flash.SetActive(true);
+                Invoke("MuzzleOff", 0.12f);
+            }
             EnemyAnimations.Play(attackAnimation);
             ThePlayer.GetComponent<PlayerDefenseManager>().TakeDamage(damagePerHit);
             attackDelayCounter = Time.time + attackDelay;
         }
         else {
-            if(!EnemyAnimations.IsPlaying(attackAnimation))
+            if (!EnemyAnimations.IsPlaying(attackAnimation)) {
                 EnemyAnimations.Play(chaseAnimation);
+                attackSFX.Stop();
+            }
         }
     }
 
