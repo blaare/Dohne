@@ -6,6 +6,7 @@ public abstract class Blaster : MonoBehaviour {
 
     public float fireRate;
     public int damagePerShot;
+    public string fireAnimationName;
 
     public int ammoInClip;
     public int clipSize;

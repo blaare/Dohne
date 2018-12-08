@@ -22,6 +22,7 @@ public class ProjectileBlaster : Blaster
             //Handle the Firing animation with a particle system
             shotParticleSystem.Stop();
             shotParticleSystem.Play();
+            GetComponent<Animation>().Play(fireAnimationName);
 
             //Create the bullet projectile
             var bullet = (GameObject)Instantiate(

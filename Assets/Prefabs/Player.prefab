@@ -204,7 +204,8 @@ GameObject:
   - component: {fileID: 224207489823733428}
   - component: {fileID: 222328762017791884}
   - component: {fileID: 114000580806834986}
-  m_Layer: 14
+  - component: {fileID: 225872061853680438}
+  m_Layer: 5
   m_Name: BloodSplatter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -995,7 +996,7 @@ GameObject:
   - component: {fileID: 33665076696792890}
   - component: {fileID: 23040135399416830}
   - component: {fileID: 54203559717577920}
-  - component: {fileID: 136539926399550722}
+  - component: {fileID: 136910964330618518}
   m_Layer: 14
   m_Name: Player
   m_TagString: Player
@@ -1039,8 +1040,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1981410458852772}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.62, y: 1.12, z: -7.8}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -51.6, y: 1, z: 29.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4053984799197060}
@@ -1405,7 +1406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2747,10 +2748,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782d1b8edde53ad499b320ff48296fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lateralMovementSpeed: 5
-  longitudinalMovementSpeed: 5
+  lateralMovementSpeed: 4
+  longitudinalMovementSpeed: 4
   yRotationSensitivity: 100
-  sprintModifier: 2
+  sprintModifier: 1.5
   sprintLookModifier: 2
   smoothing: 5
 --- !u!114 &114870843800817482
@@ -3025,7 +3026,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!136 &136539926399550722
+--- !u!136 &136910964330618518
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3034,7 +3035,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -3121,7 +3122,7 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1303254671925574}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!222 &222345570724339578
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -4292,3 +4293,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &225872061853680438
+CanvasGroup:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1303254671925574}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0

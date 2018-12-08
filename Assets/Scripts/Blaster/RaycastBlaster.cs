@@ -21,6 +21,7 @@ public class RaycastBlaster :  Blaster{
                 return;
             shotParticleSystem.Stop();
             shotParticleSystem.Play();
+            GetComponent<Animation>().Play(fireAnimationName);
             RaycastHit hit;
             if ( Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, range ,layerMask))
             {

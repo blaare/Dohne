@@ -69,6 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4956400802570720}
   - component: {fileID: 114147342368804406}
+  - component: {fileID: 111460442988671832}
   m_Layer: 0
   m_Name: Rifle
   m_TagString: Untagged
@@ -123,7 +124,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1713207764944384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.14061059, y: -1.3923104e-18, z: 0.6270408}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4331173688608008}
@@ -173,6 +174,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1328924724781338}
   m_Mesh: {fileID: 4300000, guid: 061bd680144b0284f960f96dccb0ee40, type: 3}
+--- !u!111 &111460442988671832
+Animation:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1713207764944384}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 30de622e74f569741bb837f1e35e01f2, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 30de622e74f569741bb837f1e35e01f2, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114147342368804406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,8 +200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af779c55d70597458dc8f680d6f4f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 0.2
+  fireRate: 0.1
   damagePerShot: 25
+  fireAnimationName: RifleFire
   ammoInClip: 5
   clipSize: 5
   currentAmmo: 10

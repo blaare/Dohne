@@ -239,6 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4574388508811678}
   - component: {fileID: 114136877306965408}
+  - component: {fileID: 111912429366079918}
   m_Layer: 0
   m_Name: Pistol
   m_TagString: Untagged
@@ -1343,6 +1344,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1846454738850940}
   m_Mesh: {fileID: 4300024, guid: 1c4b063dbf6d0654cbfd3fcb4556556a, type: 3}
+--- !u!111 &111912429366079918
+Animation:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1764259488962768}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 57534604644a5924fba69d549908a28f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 57534604644a5924fba69d549908a28f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114136877306965408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1356,6 +1372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 0.2
   damagePerShot: 20
+  fireAnimationName: PistolFire
   ammoInClip: 10
   clipSize: 10
   currentAmmo: 10
