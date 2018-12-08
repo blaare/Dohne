@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerDefenseManager : MonoBehaviour {
 
@@ -10,7 +11,27 @@ public class PlayerDefenseManager : MonoBehaviour {
     public int health = 100;
     public const int MAX_HEALTH = 100;
 
+    public Image bloodImage;
 
+    private bool tookDamage;
+
+    void Update()
+    {
+        if (tookDamage)
+        {
+            //Add in the damage effect
+            Color Opaque = new Color(1, 1, 1, 1);
+            bloodImage.color = Color.Lerp(bloodImage.color, Opaque, 20 * Time.deltaTime);
+            if (bloodImage.color.a >= 0.8) //Almost Opaque, close enough
+            {
+                tookDamage = false;
+            }
+        } else
+        {
+            Color Transparent = new Color(1, 1, 1, 0);
+            bloodImage.color = Color.Lerp(bloodImage.color, Transparent, 20 * Time.deltaTime);
+        }
+    }
 
     /**
      * Function TakeDamage
@@ -18,13 +39,16 @@ public class PlayerDefenseManager : MonoBehaviour {
      */ 
     public void TakeDamage(int amount)
     {
+
+        tookDamage = true;
         //Handle when the player has armor
-        if(armor > 0) {
+        if (armor > 0) {
 
             //If this damage will reduce so much to effect health.
             if(armor - amount < 0)
             {
                 amount -= armor;
+                armor = 0;
             }
             else
             {
@@ -34,7 +58,7 @@ public class PlayerDefenseManager : MonoBehaviour {
         }
 
         //Handle the case of player's health is effected.
-        if(health - amount < 0)
+        if(health - amount <= 0)
         {
             SceneManager.LoadScene(0);
             return;
