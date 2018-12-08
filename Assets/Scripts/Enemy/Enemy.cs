@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour {
     public  string              attackAnimation;
     public  string              damageAnimation;
     public  string              dieAnimation;
+    public  GameObject          Flash;
     public  GameObject          ThePlayer;
     public  GameObject          TheEnemy;
     public  GameObject[]        PatrolPoints;
@@ -98,8 +99,10 @@ public class Enemy : MonoBehaviour {
         AI.canMove = false;
         chaseSFX.Stop();
         if (Time.time >= attackDelayCounter) {
-            EnemyAnimations.Play(attackAnimation);
             attackSFX.Play();
+            Flash.SetActive(true);
+            Invoke("MuzzleOff", 0.12f);
+            EnemyAnimations.Play(attackAnimation);
             ThePlayer.GetComponent<PlayerDefenseManager>().TakeDamage(damagePerHit);
             attackDelayCounter = Time.time + attackDelay;
         }
@@ -147,6 +150,10 @@ public class Enemy : MonoBehaviour {
 
     private void ReleaseStun() {
         stun = false;
+    }
+
+    private void MuzzleOff() {
+        Flash.SetActive(false);
     }
 
     private void Die() {
