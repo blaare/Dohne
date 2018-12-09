@@ -14,5 +14,10 @@ public abstract class Item : MonoBehaviour {
     {
         transform.Rotate(new Vector3(0, 50 * Time.deltaTime, 0));
     }
-    
+
+    public void MoveFarAway()
+    {
+        transform.position = new Vector3(-99999, -99999, -99999);
+    }
+
 }

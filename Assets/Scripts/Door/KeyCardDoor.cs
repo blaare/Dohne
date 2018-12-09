@@ -8,8 +8,14 @@ public class KeyCardDoor : Door {
 
     public override void Open(GameObject player)
     {
-        if(player.GetComponent<KeyCardManager>().HasKeyCard(doorType))
-            opening = true;
+        if (player.GetComponent<KeyCardManager>().HasKeyCard(doorType))
+        {
+            if (!open && !opening)
+            {
+                opening = true;
+                GetComponent<AudioSource>().Play();
+            }
+        }
     }
 
     // Update is called once per frame

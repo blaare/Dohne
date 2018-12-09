@@ -13,13 +13,17 @@ public class DefenseItem : Item {
         if (hasCollided)
             return;
         hasCollided = true;
+        
 
-        if(itemToEffectName == "Health")
+
+        if (itemToEffectName == "Health")
         {
             if (player.GetComponent<PlayerDefenseManager>().IncreaseHealth(quantity))
             {
                 Debug.Log("Player Healed");
-                Destroy(gameObject);
+                GetComponent<AudioSource>().Play();
+                MoveFarAway();
+                Destroy(gameObject, GetComponent<AudioSource>().clip.length);
                 return;
             }
         } else 
@@ -27,7 +31,9 @@ public class DefenseItem : Item {
             if(player.GetComponent<PlayerDefenseManager>().IncreaseArmor(quantity))
             {
                 Debug.Log("Player Armor Increased");
-                Destroy(gameObject);
+                GetComponent<AudioSource>().Play();
+                MoveFarAway();
+                Destroy(gameObject, GetComponent<AudioSource>().clip.length);
                 return;
             }
         }

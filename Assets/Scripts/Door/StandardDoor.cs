@@ -7,7 +7,13 @@ public class StandardDoor : Door {
 
     public override void Open(GameObject player)
     {
-        opening = true;
+        if (!open && !opening)
+        {
+            opening = true;
+
+            GetComponent<AudioSource>().Play();
+
+        }
     }
 
     // Update is called once per frame

@@ -13,9 +13,12 @@ public class WeaponItem : Item {
 
     public override void Pickup(GameObject player)
     {
+        
         if (hasCollided)
             return;
         hasCollided = true;
+        
+
         //Get the player's WeaponSelector
         WeaponSelector weaponSelector = player.GetComponent<WeaponSelector>();
 
@@ -26,7 +29,9 @@ public class WeaponItem : Item {
             {
                 if (weapon.GetComponent<Blaster>().IncreaseAmmo(quantity))
                 {
-                    Destroy(gameObject);
+                    GetComponent<AudioSource>().Play();
+                    MoveFarAway();
+                    Destroy(gameObject, GetComponent<AudioSource>().clip.length);
                     Debug.Log("Increased Ammo Count by " + quantity.ToString());
                     return;
                 }
@@ -39,7 +44,10 @@ public class WeaponItem : Item {
                 }
             }
         }
-        Destroy(gameObject);
+
+        GetComponent<AudioSource>().Play();
+        MoveFarAway();
+        Destroy(gameObject, GetComponent<AudioSource>().clip.length);
         Debug.Log("Picked up " + weaponName);
 
         //Make sure the transforms are parented, correctly.

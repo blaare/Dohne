@@ -14,6 +14,7 @@ public class AmmoItem : Item {
             return;
         hasCollided = true;
 
+        Debug.Log("HELP2");
         WeaponSelector weaponSelector = player.GetComponent<WeaponSelector>();
         //Make sure that you don't add duplicate weapons to the player's weapons list
         foreach (GameObject weapon in weaponSelector.weapons)
@@ -22,7 +23,9 @@ public class AmmoItem : Item {
             {
                 if (weapon.GetComponent<Blaster>().IncreaseAmmo(quantity))
                 {
-                    Destroy(gameObject);
+                    GetComponent<AudioSource>().Play();
+                    MoveFarAway();
+                    Destroy(gameObject, GetComponent<AudioSource>().clip.length);
                     Debug.Log("Increased Ammo Count by " + quantity.ToString());
                     return;
                 }
