@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1158173332984148}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0.503}
+  m_LocalPosition: {x: 0, y: 0.34, z: 1.331}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4956400802570720}
@@ -200,16 +200,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af779c55d70597458dc8f680d6f4f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 0.1
   damagePerShot: 25
   fireAnimationName: RifleFire
-  ammoInClip: 5
-  clipSize: 5
+  ammoInClip: 25
+  clipSize: 25
   currentAmmo: 10
-  maxAmmo: 40
+  maxAmmo: 100
   range: 50
-  shotParticleSystem: {fileID: 198846303837306550, guid: 2cf4b61d8ff773c4c8c0f476e3509273,
-    type: 2}
+  shotParticleSystem: {fileID: 198097727848584152}
 --- !u!198 &198097727848584152
 ParticleSystem:
   m_ObjectHideFlags: 1

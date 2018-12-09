@@ -8,6 +8,9 @@ public class Melee : Blaster {
     {
         //hit stuff in layer 10
         int layerMask = 1 << 10;
+        if (GetComponent<Animation>().isPlaying)
+            return;
+
         GetComponent<Animation>().Play(fireAnimationName);
 
         //This hits everything except layer 10

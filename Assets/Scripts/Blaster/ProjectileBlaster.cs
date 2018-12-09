@@ -15,9 +15,7 @@ public class ProjectileBlaster : Blaster
 
         if (ammoInClip > 0)
         {
-            if (nextFireTime < Time.time)
-                nextFireTime = Time.time + fireRate;
-            else
+            if (GetComponent<Animation>().isPlaying)
                 return;
             //Handle the Firing animation with a particle system
             shotParticleSystem.Stop();
