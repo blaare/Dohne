@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4720074571981762}
   - component: {fileID: 114944907821865018}
+  - component: {fileID: 111031933073661048}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Untagged
@@ -132,6 +133,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &111031933073661048
+Animation:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644641040364484}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 88f497e06c5369649b7e612b68fbe796, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 88f497e06c5369649b7e612b68fbe796, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114944907821865018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -143,8 +159,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af779c55d70597458dc8f680d6f4f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 0.5
+  fireRate: 0.4
   damagePerShot: 25
+  fireAnimationName: ShotgunFire
   ammoInClip: 6
   clipSize: 6
   currentAmmo: 12
