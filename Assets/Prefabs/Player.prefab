@@ -2733,6 +2733,8 @@ MonoBehaviour:
   - {fileID: 114958669570977990}
   weapons:
   - {fileID: 1737168197699888}
+  hideTime: 5
+  changingWeapons: 0
   weaponIndex: 0
 --- !u!114 &114862514456030628
 MonoBehaviour:

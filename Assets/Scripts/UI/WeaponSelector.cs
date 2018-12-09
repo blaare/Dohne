@@ -9,6 +9,10 @@ public class WeaponSelector : MonoBehaviour {
     public Image[] weaponImages = new Image[5];
     public List<GameObject> weapons;
 
+    public float hideTime = 5;
+    private float nextHideTime;
+    public bool changingWeapons = false;
+
     public int weaponIndex;
 
 	// Use this for initialization
@@ -36,6 +40,7 @@ public class WeaponSelector : MonoBehaviour {
             DeSelectWeapon(weaponIndex);
             weaponIndex = (weaponIndex + 1) % weapons.Count;
             SelectWeapon(weaponIndex);
+            changingWeapons = true;
         }
         else if (d < 0f || Input.GetKeyDown(KeyCode.Q))
         {
@@ -46,6 +51,7 @@ public class WeaponSelector : MonoBehaviour {
                 weaponIndex = weapons.Count - 1;
             }
             SelectWeapon(weaponIndex);
+            changingWeapons = true;
         }
 
         //NUMBERS INPUT
@@ -54,28 +60,72 @@ public class WeaponSelector : MonoBehaviour {
             DeSelectWeapon(weaponIndex);
             weaponIndex = 0;
             SelectWeapon(weaponIndex);
+            changingWeapons = true;
         } else if (Input.GetKeyDown(KeyCode.Alpha2) && weapons.Count >= 2)
         {
             DeSelectWeapon(weaponIndex);
             weaponIndex = 1;
             SelectWeapon(weaponIndex);
-        } else if (Input.GetKeyDown(KeyCode.Alpha3) && weapons.Count >= 3)
+            changingWeapons = true;
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && weapons.Count >= 3)
         {
             DeSelectWeapon(weaponIndex);
             weaponIndex = 2;
             SelectWeapon(weaponIndex);
-        } else if (Input.GetKeyDown(KeyCode.Alpha4) && weapons.Count >= 4)
+            changingWeapons = true;
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4) && weapons.Count >= 4)
         {
             DeSelectWeapon(weaponIndex);
             weaponIndex = 3;
             SelectWeapon(weaponIndex);
-        } else if (Input.GetKeyDown(KeyCode.Alpha5) && weapons.Count >= 5)
+            changingWeapons = true;
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha5) && weapons.Count >= 5)
         {
             DeSelectWeapon(weaponIndex);
             weaponIndex = 4;
             SelectWeapon(weaponIndex);
+            changingWeapons = true;
+
         }
 
+
+        if(changingWeapons)
+        {
+            ShowWeaponIcons();
+
+            nextHideTime = Time.time + hideTime;
+            changingWeapons = false;
+        }
+
+        if(nextHideTime <= Time.time)
+        {
+            HideWeaponIcons();
+        }
+
+    }
+
+    public void HideWeaponIcons()
+    {
+        for(int i = 0; i < weaponIcons.Length; i++)
+        {
+            weaponIcons[i].color = new Color(weaponIcons[i].color.r, weaponIcons[i].color.g, weaponIcons[i].color.b, weaponIcons[i].color.a != 0 ? 0.25f : 0);
+            weaponImages[i].color = new Color(weaponImages[i].color.r, weaponImages[i].color.g, weaponIcons[i].color.b, 0.25f);
+        }
+    }
+
+    public void ShowWeaponIcons()
+    {
+        for (int i = 0; i < weaponIcons.Length; i++)
+        {
+            weaponIcons[i].color = new Color(weaponIcons[i].color.r, weaponIcons[i].color.g, weaponIcons[i].color.b, weaponIcons[i].color.a != 0 ? 0.75f : 0);
+            weaponImages[i].color = new Color(weaponIcons[i].color.r, weaponIcons[i].color.g, weaponIcons[i].color.b, .75f);
+        }
     }
 
     /**
@@ -94,7 +144,7 @@ public class WeaponSelector : MonoBehaviour {
      */ 
     public void SelectWeapon(int index)
     {
-        weaponIcons[index].color = new Color(1, 1, 1, 1); 
+        weaponIcons[index].color = new Color(1, 1, 1, .75f); 
         weapons[index].SetActive(true);
         //weapons[index].transform.position = transform.GetChild(2).transform.position;
 
