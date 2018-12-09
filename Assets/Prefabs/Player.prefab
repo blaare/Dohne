@@ -998,6 +998,7 @@ GameObject:
   - component: {fileID: 23040135399416830}
   - component: {fileID: 54203559717577920}
   - component: {fileID: 136910964330618518}
+  - component: {fileID: 114515182048214994}
   m_Layer: 14
   m_Name: Player
   m_TagString: Player
@@ -1041,8 +1042,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1981410458852772}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.62, y: 1.12, z: -7.8}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -51.6, y: 1, z: 29.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4053984799197060}
@@ -2189,7 +2190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9518f2430ab63db458cc5a96ae19c0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 0
   damagePerShot: 5
   fireAnimationName: KnifeFire
   ammoInClip: 0
@@ -2290,6 +2290,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Settings
+--- !u!114 &114515182048214994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1981410458852772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8c75825c4f5504fbb7ee34b012d034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaler: {fileID: 114911516590347418}
 --- !u!114 &114516705050195660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2465,6 +2477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaler: {fileID: 114911516590347418}
+  slider: {fileID: 114424990084758388}
 --- !u!114 &114685515869759110
 MonoBehaviour:
   m_ObjectHideFlags: 1

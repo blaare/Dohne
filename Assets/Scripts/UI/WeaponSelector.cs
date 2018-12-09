@@ -29,15 +29,15 @@ public class WeaponSelector : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        //SCROLL WHEEL INPUT
         var d = Input.GetAxis("Mouse ScrollWheel");
-        if (d > 0f)
+        if (d > 0f || Input.GetKeyDown(KeyCode.E))
         {
             DeSelectWeapon(weaponIndex);
             weaponIndex = (weaponIndex + 1) % weapons.Count;
             SelectWeapon(weaponIndex);
         }
-        else if (d < 0f)
+        else if (d < 0f || Input.GetKeyDown(KeyCode.Q))
         {
             DeSelectWeapon(weaponIndex);
             weaponIndex = (weaponIndex - 1) % weapons.Count;
@@ -47,8 +47,36 @@ public class WeaponSelector : MonoBehaviour {
             }
             SelectWeapon(weaponIndex);
         }
-        
-	}
+
+        //NUMBERS INPUT
+        if(Input.GetKeyDown(KeyCode.Alpha1) && weapons.Count >= 1)
+        {
+            DeSelectWeapon(weaponIndex);
+            weaponIndex = 0;
+            SelectWeapon(weaponIndex);
+        } else if (Input.GetKeyDown(KeyCode.Alpha2) && weapons.Count >= 2)
+        {
+            DeSelectWeapon(weaponIndex);
+            weaponIndex = 1;
+            SelectWeapon(weaponIndex);
+        } else if (Input.GetKeyDown(KeyCode.Alpha3) && weapons.Count >= 3)
+        {
+            DeSelectWeapon(weaponIndex);
+            weaponIndex = 2;
+            SelectWeapon(weaponIndex);
+        } else if (Input.GetKeyDown(KeyCode.Alpha4) && weapons.Count >= 4)
+        {
+            DeSelectWeapon(weaponIndex);
+            weaponIndex = 3;
+            SelectWeapon(weaponIndex);
+        } else if (Input.GetKeyDown(KeyCode.Alpha5) && weapons.Count >= 5)
+        {
+            DeSelectWeapon(weaponIndex);
+            weaponIndex = 4;
+            SelectWeapon(weaponIndex);
+        }
+
+    }
 
     /**
      * Function DeSelectWeapon
