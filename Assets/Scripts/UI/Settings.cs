@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour {
     public CanvasScaler scaler;
+    public Slider slider;
 
     public void Start()
     {
         if (PlayerPrefs.HasKey("UI-Scale"))
         {
             scaler.scaleFactor = PlayerPrefs.GetFloat("UI-Scale");
+            slider.value = scaler.scaleFactor;
         }
     }
 
