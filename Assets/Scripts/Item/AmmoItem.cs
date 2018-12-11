@@ -38,5 +38,7 @@ public class AmmoItem : Item {
             }
         }
 
+        hasCollided = false;
+
     }
 }
