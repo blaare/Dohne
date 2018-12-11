@@ -2793,8 +2793,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782d1b8edde53ad499b320ff48296fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lateralMovementSpeed: 4
-  longitudinalMovementSpeed: 4
+  lateralMovementSpeed: 5
+  longitudinalMovementSpeed: 5
   yRotationSensitivity: 100
   sprintModifier: 1.5
   sprintLookModifier: 2

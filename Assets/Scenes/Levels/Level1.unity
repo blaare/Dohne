@@ -3081,6 +3081,16 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114869673229824532, guid: 7da2da07c5c832a42b728aac63e790a2,
+        type: 2}
+      propertyPath: lateralMovementSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114869673229824532, guid: 7da2da07c5c832a42b728aac63e790a2,
+        type: 2}
+      propertyPath: longitudinalMovementSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7da2da07c5c832a42b728aac63e790a2, type: 2}
   m_IsPrefabAsset: 0
