@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour {
     void Start()
     {
         playerDefenseManager = GetComponent<PlayerDefenseManager>();
-        
+        DontDestroyOnLoad(this);
     }
 
 
