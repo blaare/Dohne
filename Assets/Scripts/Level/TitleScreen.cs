@@ -10,6 +10,10 @@ public class TitleScreen : MonoBehaviour {
 	void Start () {
         Cursor.visible = true;
         DontDestroyOnLoad(this);
+        var player = GameObject.Find("Player");
+
+        if (player != null)
+            Destroy(player); 
 	}
 
 }

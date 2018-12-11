@@ -4,13 +4,35 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Plane
+    100004: Plane_001
+    100006: Plane_011
     400000: //RootNode
+    400002: Plane
+    400004: Plane_001
+    400006: Plane_011
     2100000: unnamed
+    2100002: Floor
+    2100004: Roof
+    2100006: Walls
+    2100008: Walls_001
+    2100010: Ceiling
     2300000: //RootNode
+    2300002: Plane
+    2300004: Plane_001
+    2300006: Plane_011
     3300000: //RootNode
+    3300002: Plane
+    3300004: Plane_001
+    3300006: Plane_011
     4300000: Plane_003
+    4300002: Plane_010
+    4300004: Plane_001
+    4300006: Plane
+    4300008: Plane_011
     7400000: Default Take
     9500000: //RootNode
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -42,7 +64,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 5
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -62,7 +84,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 5
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
@@ -83,7 +105,6 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
