@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33687927868123142}
   - component: {fileID: 23904607899491332}
   - component: {fileID: 65696435399141500}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Door(Actual)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4224861009223856}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OpenDestination
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4879624728751480}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 65893292572107088}
   - component: {fileID: 114195294237891208}
   - component: {fileID: 82772324331028506}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BlueKeyCardDoor
   m_TagString: door
   m_Icon: {fileID: 0}

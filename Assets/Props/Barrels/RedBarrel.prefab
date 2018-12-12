@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4058051056209284}
   - component: {fileID: 65274299979611578}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedBarrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4593774248834474}
   - component: {fileID: 33155026475756464}
   - component: {fileID: 23477709338434368}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}

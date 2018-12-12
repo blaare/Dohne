@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4354066945567458}
   - component: {fileID: 65823380721289562}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: YellowBarrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4570814129274676}
   - component: {fileID: 33084160321853616}
   - component: {fileID: 23514000164480700}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}

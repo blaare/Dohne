@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4713582981161240}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OpenDestination
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 65962691361836552}
   - component: {fileID: 114622603607314118}
   - component: {fileID: 82309604401417032}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DoomDoor
   m_TagString: door
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 33375957192802872}
   - component: {fileID: 23604080258858368}
   - component: {fileID: 65779727913505664}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Door(Actual)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

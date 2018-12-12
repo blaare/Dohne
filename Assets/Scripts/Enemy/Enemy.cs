@@ -49,11 +49,12 @@ public class Enemy : MonoBehaviour {
     private void Update() {
         if (!dead) {
             if (!stun) {
-                SightCheck();
                 if (chase)
                     ChasePlayer();
-                else
+                else {
+                    SightCheck();
                     Patrol();
+                }
             }
             else {
                 EnemyAnimations.Play(damageAnimation);
@@ -72,10 +73,12 @@ public class Enemy : MonoBehaviour {
             Vector3 targetDir = ThePlayer.transform.position - transform.position;
             float distance = Vector3.Distance(targetDir, transform.forward);
             float angle = Vector3.Angle(targetDir, transform.forward);
-            if (angle < sightFOV && distance < sightRange && !chase) {
-                patrolSFX.Stop();
-                beginChaseSFX.Play();
-                chase = true;
+            if (Physics.Raycast(transform.position, targetDir, out Shot)) {
+                if(Shot.transform.tag == "Player" && angle < sightFOV && distance < sightRange && !chase) {
+                    patrolSFX.Stop();
+                    beginChaseSFX.Play();
+                    chase = true;
+                }
             }
         }
     }

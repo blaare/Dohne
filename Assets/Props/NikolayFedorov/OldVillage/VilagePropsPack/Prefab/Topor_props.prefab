@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3370140}
   - component: {fileID: 2366760}
   - component: {fileID: 6492784}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Topor_lod0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 441820}
   - component: {fileID: 3390234}
   - component: {fileID: 2381720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Topor_lod01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   m_Component:
   - component: {fileID: 475398}
   - component: {fileID: 20506592}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Topor_props
   m_TagString: Untagged
   m_Icon: {fileID: 0}

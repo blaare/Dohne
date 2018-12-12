@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33689899502125540}
   - component: {fileID: 23933307775460568}
   - component: {fileID: 64839404051154586}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bucket01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2374664}
   - component: {fileID: 6494822}
   - component: {fileID: 20577668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wrata01Door01LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 418282}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wrata01Wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 431034}
   - component: {fileID: 3372026}
   - component: {fileID: 2360202}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wrata01Door01_LOD02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 410796}
   - component: {fileID: 3395176}
   - component: {fileID: 2398416}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wrata01LOD02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 2335586}
   - component: {fileID: 6426578}
   - component: {fileID: 20547888}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wrata01Detail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 402522}
   - component: {fileID: 3387206}
   - component: {fileID: 2390902}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wrata01Door01_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 471370}
   - component: {fileID: 3378812}
   - component: {fileID: 2339690}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wrata01LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

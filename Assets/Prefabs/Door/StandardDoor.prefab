@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4154240763853366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OpenDestination
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 65357765621419268}
   - component: {fileID: 114711945996381804}
   - component: {fileID: 82569462507594294}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StandardDoor
   m_TagString: door
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4970919901571730}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 33512836452287428}
   - component: {fileID: 23306203238898342}
   - component: {fileID: 65230485199686408}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Door(Actual)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
