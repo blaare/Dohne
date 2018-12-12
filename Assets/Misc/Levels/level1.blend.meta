@@ -4,14 +4,23 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Plane_000
+    100004: Plane_013
     400000: //RootNode
+    400002: Plane_000
+    400004: Plane_013
     2100000: unnamed
     2100002: Floor
     2100004: Walls
     2100006: Ceiling
     2300000: //RootNode
+    2300002: Plane_000
+    2300004: Plane_013
     3300000: //RootNode
+    3300002: Plane_000
+    3300004: Plane_013
     4300000: Plane_013
+    4300002: Plane_000
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
