@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5104,9 +5104,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 821855249}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.27, y: 3.11, z: 26.79}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.1, y: 2.2, z: 26.42}
+  m_LocalScale: {x: 5, y: 8, z: 2}
   m_Children: []
   m_Father: {fileID: 1668623885}
   m_RootOrder: 1
@@ -5971,7 +5971,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4792219162423584, guid: 18203744835d11549911104a07e7a708, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 18.926418
+      value: 28.57
       objectReference: {fileID: 0}
     - target: {fileID: 4792219162423584, guid: 18203744835d11549911104a07e7a708, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6723,7 +6723,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.351
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -12288,7 +12288,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4110316484752536, guid: 53d7356e26b58bd40a4a2f4d232d31b3, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114018274850275482, guid: 53d7356e26b58bd40a4a2f4d232d31b3,
         type: 2}
