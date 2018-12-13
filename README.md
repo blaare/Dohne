@@ -44,7 +44,7 @@ The ground type of our levels will be simple textures that correspond to differe
 * Rough cavernous floors, ceilings
 * Slightly developed walls
 ### Control
-The user will use a standard FPS controller where WASD controls longitudinal and lateral movement. The mouse will control the user's aming by rotating along the y axis. Left mouse click will allow firing. Right mouse click or shift will make the player run.
+The user will use a standard FPS controller where WASD controls longitudinal and lateral movement. The mouse will control the user's aming by rotating along the y axis. Left mouse click will allow firing. Shift will make the player run.
 ### Pickups
 * Ammo crates of varying capacity and type.
 * Health restoration items of varying effectiveness.
