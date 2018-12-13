@@ -456,7 +456,7 @@ MonoBehaviour:
   clipSize: 25
   currentAmmo: 10
   maxAmmo: 100
-  range: 50
+  range: 100
   shotParticleSystem: {fileID: 198097727848584152}
   FireSound: {fileID: 82085292859296116}
   ReloadSound: {fileID: 82525591264239710}
