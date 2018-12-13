@@ -1398,11 +1398,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 826766482}
     m_Modifications:
-    - target: {fileID: 114042607231069336, guid: 18203744835d11549911104a07e7a708,
-        type: 2}
-      propertyPath: PatrolPoints.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4792219162423584, guid: 18203744835d11549911104a07e7a708, type: 2}
       propertyPath: m_LocalPosition.x
       value: -47.317947
@@ -1445,11 +1440,6 @@ Prefab:
       propertyPath: PatrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 1594995091}
-    - target: {fileID: 114042607231069336, guid: 18203744835d11549911104a07e7a708,
-        type: 2}
-      propertyPath: ThePlayer
-      value: 
-      objectReference: {fileID: 1226108349}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18203744835d11549911104a07e7a708, type: 2}
   m_IsPrefabAsset: 0
@@ -2179,6 +2169,10 @@ Prefab:
       propertyPath: ThePlayer
       value: 
       objectReference: {fileID: 1226108349}
+    - target: {fileID: 1155436982904602, guid: 1e04a7b5108cbc14ebe3096e99b97cc3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e04a7b5108cbc14ebe3096e99b97cc3, type: 2}
   m_IsPrefabAsset: 0
@@ -2473,6 +2467,11 @@ Prefab:
       propertyPath: ThePlayer
       value: 
       objectReference: {fileID: 1226108349}
+    - target: {fileID: 114058317748715702, guid: 082c7a5ad58ba25418b6997454ec68a1,
+        type: 2}
+      propertyPath: height
+      value: 0.03
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 082c7a5ad58ba25418b6997454ec68a1, type: 2}
   m_IsPrefabAsset: 0
@@ -3113,11 +3112,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 826766482}
     m_Modifications:
-    - target: {fileID: 114598750665477174, guid: 1e04a7b5108cbc14ebe3096e99b97cc3,
-        type: 2}
-      propertyPath: PatrolPoints.Array.size
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4502748305735434, guid: 1e04a7b5108cbc14ebe3096e99b97cc3, type: 2}
       propertyPath: m_LocalPosition.x
       value: -46.92
@@ -3170,21 +3164,6 @@ Prefab:
       propertyPath: PatrolPoints.Array.data[3]
       value: 
       objectReference: {fileID: 705979308}
-    - target: {fileID: 114598750665477174, guid: 1e04a7b5108cbc14ebe3096e99b97cc3,
-        type: 2}
-      propertyPath: ThePlayer
-      value: 
-      objectReference: {fileID: 1226108349}
-    - target: {fileID: 114162595098945354, guid: 1e04a7b5108cbc14ebe3096e99b97cc3,
-        type: 2}
-      propertyPath: whenCloseToDestination
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114162595098945354, guid: 1e04a7b5108cbc14ebe3096e99b97cc3,
-        type: 2}
-      propertyPath: repathRate
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e04a7b5108cbc14ebe3096e99b97cc3, type: 2}
   m_IsPrefabAsset: 0
@@ -4559,6 +4538,11 @@ Prefab:
       propertyPath: ThePlayer
       value: 
       objectReference: {fileID: 1226108349}
+    - target: {fileID: 114858963921435768, guid: 18203744835d11549911104a07e7a708,
+        type: 2}
+      propertyPath: height
+      value: 0.03
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18203744835d11549911104a07e7a708, type: 2}
   m_IsPrefabAsset: 0

@@ -129,7 +129,7 @@ public class Enemy : MonoBehaviour {
         EnemyAnimations.Play(patrolAnimation);
         if (!patrolSFX.isPlaying)
             patrolSFX.Play();
-        if (AI.reachedEndOfPath) {
+        if (AI.reachedDestination) {
             Debug.Log("Destination Reached!");
             if (PatrolPoints[patrolCycleCounter] != PatrolPoints.Last())
                 patrolCycleCounter++;
