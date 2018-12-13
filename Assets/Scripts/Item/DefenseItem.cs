@@ -25,6 +25,9 @@ public class DefenseItem : Item {
                 MoveFarAway();
                 Destroy(gameObject, GetComponent<AudioSource>().clip.length);
                 return;
+            } else
+            {
+                hasCollided = false;
             }
         } else 
         {
@@ -35,6 +38,9 @@ public class DefenseItem : Item {
                 MoveFarAway();
                 Destroy(gameObject, GetComponent<AudioSource>().clip.length);
                 return;
+            } else
+            {
+                hasCollided = false;
             }
         }
     }
