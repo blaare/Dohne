@@ -40,5 +40,13 @@ public class KeyCardManager : MonoBehaviour {
         return keyCardColorsObtained.Contains(keyCardName);
     }
 
+    public void RemoveKeyCards()
+    {
+        keyCardItems[0].sprite = null;
+        keyCardItems[1].sprite = null;
+        keyCardItems[2].sprite = null;
+        keyCardColorsObtained.Clear();
+    }
+
     
 }

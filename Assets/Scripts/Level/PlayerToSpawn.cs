@@ -6,11 +6,10 @@ public class PlayerToSpawn : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GameObject.Find("Player").transform.position = transform.position;
+        var player = GameObject.Find("Player");
+        player.transform.position = transform.position;
+
+        player.GetComponent<KeyCardManager>().RemoveKeyCards();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }
