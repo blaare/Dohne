@@ -9,6 +9,8 @@ public class ProjectileBlaster : Blaster
     public Transform bulletSpawn;
     private float nextFireTime = 0;
 
+    public AudioSource FireSound;
+
     public override void Fire()
     {
 
@@ -21,6 +23,7 @@ public class ProjectileBlaster : Blaster
             shotParticleSystem.Stop();
             shotParticleSystem.Play();
             GetComponent<Animation>().Play(fireAnimationName);
+            FireSound.Play();
 
             //Create the bullet projectile
             var bullet = (GameObject)Instantiate(

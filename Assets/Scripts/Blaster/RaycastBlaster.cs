@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class RaycastBlaster :  Blaster{
 
+    public AudioSource FireSound;
+    public AudioSource ReloadSound;
+
     public override void Fire()
     {
         //hit stuff in layer 10
@@ -19,7 +22,7 @@ public class RaycastBlaster :  Blaster{
             shotParticleSystem.Stop();
             shotParticleSystem.Play();
             GetComponent<Animation>().Play(fireAnimationName);
-            GetComponent<AudioSource>().Play();
+            FireSound.Play();
             RaycastHit hit;
             if ( Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, range ,layerMask))
             {
@@ -53,8 +56,11 @@ public class RaycastBlaster :  Blaster{
             Debug.Log("NO AMMO");
             return;
         }
+        if (ammoInClip == clipSize)
+            return;
+        ReloadSound.Play();
         //Handle if ammo is still in the clip
-        if(ammoInClip > 0)
+        if (ammoInClip > 0)
         {
             int difference = clipSize - ammoInClip;
 
