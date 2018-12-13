@@ -487,7 +487,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1445250640730588}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 43.765366, y: 1.52, z: -38.63}
+  m_LocalPosition: {x: -3.0599995, y: 1.78, z: -1.7534223}
   m_LocalScale: {x: 1.2, y: 2.7, z: 1.48}
   m_Children:
   - {fileID: 4203023693492894}
@@ -1455,7 +1455,6 @@ MonoBehaviour:
   damageAnimation: Robo1 Getting damage
   dieAnimation: Robo1 Die
   Flash: {fileID: 1137837157852568}
-  ThePlayer: {fileID: 0}
   TheEnemy: {fileID: 1329148827327672}
   PatrolPoints:
   - {fileID: 0}
@@ -1716,7 +1715,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1

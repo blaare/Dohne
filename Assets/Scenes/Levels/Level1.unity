@@ -1873,11 +1873,6 @@ Prefab:
       propertyPath: m_Name
       value: RifleRobo (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114177918512927236, guid: 082c7a5ad58ba25418b6997454ec68a1,
-        type: 2}
-      propertyPath: ThePlayer
-      value: 
-      objectReference: {fileID: 1226108349}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 082c7a5ad58ba25418b6997454ec68a1, type: 2}
   m_IsPrefabAsset: 0

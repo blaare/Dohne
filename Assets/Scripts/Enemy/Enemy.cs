@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour {
     public  string              damageAnimation;
     public  string              dieAnimation;
     public  GameObject          Flash = null;
-    public  GameObject          ThePlayer;
+    private  GameObject          ThePlayer;
     public  GameObject          TheEnemy;
     public  GameObject[]        PatrolPoints;
     public  AudioSource         patrolSFX;
@@ -70,6 +70,7 @@ public class Enemy : MonoBehaviour {
 
     private void SightCheck() {
         if (!chase) {
+            ThePlayer = GameObject.Find("Player");
             Vector3 targetDir = ThePlayer.transform.position - transform.position;
             float distance = Vector3.Distance(targetDir, transform.forward);
             float angle = Vector3.Angle(targetDir, transform.forward);
