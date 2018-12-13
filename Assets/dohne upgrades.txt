@@ -1,8 +1,0 @@
-ai
-sound effects
-Animation
-"taking a hit" notification
-Number keys change weapons too
-Increase run speed
-Enemy Hit Notification
-Ammo Labels
