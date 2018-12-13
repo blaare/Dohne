@@ -8,6 +8,7 @@ public class PlayerToSpawn : MonoBehaviour {
 	void Start () {
         var player = GameObject.Find("Player");
         player.transform.position = transform.position;
+        player.transform.rotation = transform.rotation;
 
         player.GetComponent<KeyCardManager>().RemoveKeyCards();
 	}

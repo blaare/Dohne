@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 114177918512927236}
   m_Layer: 10
   m_Name: RifleRobo
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -486,9 +486,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1445250640730588}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.0599995, y: 1.78, z: -1.7534223}
-  m_LocalScale: {x: 1.2, y: 2.7, z: 1.48}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: -14.99, y: 1.54, z: 47.82}
+  m_LocalScale: {x: 1.2000005, y: 2.7, z: 1.4800005}
   m_Children:
   - {fileID: 4203023693492894}
   - {fileID: 4586522358930920}
@@ -499,7 +499,7 @@ Transform:
   - {fileID: 4155324445409516}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!4 &4586522358930920
 Transform:
   m_ObjectHideFlags: 1
